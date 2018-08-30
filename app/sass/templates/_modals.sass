@@ -1,0 +1,230 @@
+.modals-container
+	position: fixed
+	left: 0
+	top: 0
+
+	height: 100%
+	right: 0
+	overflow: auto
+	margin: 0
+	padding: 0
+	border: 0
+	border-collapse: collapse
+	z-index: 10051
+.modals-container.js-show-search > div
+	height: 100%
+.modal-container_i
+	height: 100%;
+	margin: 0 auto;
+.modal-container_i2 
+	padding: 24px;
+	margin: 0;
+	border: 0;
+	vertical-align: middle;
+
+
+
+.modals__callback-wrapper
+	background-color: #fff
+	padding: 35px 65px
+.modal-close
+	position: absolute
+	right: -45px
+	top: 0
+	cursor: pointer
+	svg
+		height: 34px
+		transition: 0.3s
+	&:hover .cls-1
+		stroke: $color-dark-red
+
+
+
+//------------- job ------
+
+.psevd-upload
+	display: block
+input[name="uploaded_file"]
+	max-width: 250px
+	font-size: 13px
+	color: #6b6b6b
+//------------- search ------
+.modals__search
+	color: #fff
+	max-width: 1200px
+	margin: 0 auto
+	.modals__search-wrapper
+		min-width: 1200px
+	.input-search-rezult-wrap
+		background-color: transparent
+		position: relative
+		height: 53px
+		text-align-last: left
+		text-align: left
+		cursor: pointer
+		.form-control
+			background-color: transparent	
+			border: none
+			padding-left: 0
+			colo: #fff	
+		input[type="search"]
+			color: #fff
+			opacity: 1
+			font-weight: bold
+			display: inline-block
+			width: 95%
+			+place(#5f5f5f , 16px)
+		.search-btn-submit
+			background: url(../img/header/search-bg-lupa.png) no-repeat right center
+			height: 53px
+			width: 53px	
+			position: absolute
+			right: 0
+			border: 0;
+			cursor: pointer			
+	.content_rezult
+	.search-not-found
+		font-size: 20px;
+		color: #ffffff;
+		border: 2px solid #ccc;
+		padding: 8px;
+		text-align: center;
+		background-color: rgba(204, 204, 204, 0.3);
+		text-shadow: 1px 1px #332828;
+	.search__rezult
+		margin-top: 12px
+		padding-top: 35px
+		border-top: 2px solid #fff
+		min-height: 200px
+		.projects__block 
+			.pli-t 
+				height: 200px			
+			img
+				max-width: 100%
+				width: auto
+				margin: 0 auto
+				left: 50%;
+				transform: translateX(-50%)
+			.projects__last-item-descr
+				min-height: 145px	
+	.swiper-button
+		width: 165px
+		overflow: hidden
+		z-index: 11;
+		position: absolute
+		bottom: 0
+		margin-left: -85px
+		left: 50% !important
+
+	.tag_rezult	
+		overflow: hidden
+	.tag__rezult-item
+		float: left
+		color: #fff	
+		margin-bottom: 15px
+		width: 20%
+		span
+			color: #fff
+			font-size: 16px
+			letter-spacing: 0.48px
+			line-height: 22px
+	.modal-close
+		right: 0
+		z-index: 10
+	.form-check-input
+		display: none													
+		&.active .form-check-label
+			background-color: $color-dark-red
+			border-color: transparent
+				
+	.form-check-label
+		width: 270px		
+		display: block
+		font-size: 16px
+		letter-spacing: 3.2px
+		font-family: 'Stem-Bold'
+		border: 3px solid #cfcfd1;		
+		background-color: transparent
+	.form-check-wrap
+		overflow: hidden
+		.form-check-input:checked + .form-check-label
+			background-color: $color-dark-red
+			border-color: transparent
+		a
+			z-index: 1;
+			height: 54px;
+			line-height: 48px;
+			margin: 0 0 15px;
+			padding: 0;
+			text-align: center;
+			float: left;
+			color: #fff	!important;
+			position: relative;
+			display: block;			
+			&:hover, &:focus
+				.form-check-label				
+					background-color: $color-dark-red	
+					border-color: $color-dark-red !important
+					transition: 0.3s	
+					cursor: pointer	
+			&.active .form-check-label
+				background-color: $color-dark-red
+				border-color: transparent
+
+@media only screen and (max-width : 1200px)
+	.modals__search 
+		padding-left: 15px
+		padding-right: 15px
+		.modals__search-wrapper
+			min-width: 550px
+		.modal-close
+			right: 30px
+		.tag__rezult-item
+			width: 40%
+		.form-check-wrap a
+			float: none
+			margin-bottom: 15px
+		.content_rezult
+			max-width: 800px
+	.js-show-search
+		background-color: rgba(0, 0, 0, 0.8);	
+
+@media only screen and (max-width : 850px)
+	.modals__search 
+		.content_rezult
+			max-width: 500px	
+
+@media only screen and (max-width : 650px)
+	.modals__callback-wrapper
+		padding-left: 15px
+		padding-right: 15px
+	.box-modal
+		padding-left: 5px
+		padding-right: 5px
+	.modal-close
+		position: absolute
+		right: 20px
+		top: 20px
+		svg 
+			height: 20px
+			.cls-1
+				stroke: #10121a	
+		&:hover 
+			stroke: $color-dark-red	
+
+	.modals__search
+		.modals__search-wrapper
+			min-width: 350px
+		.tag__rezult-item
+			width: 100%
+		.modal-close
+			top: -30px
+			right: 20px
+			svg 
+				.cls-1
+		    		stroke: #fff;		
+
+@media only screen and (max-width : 480px)
+	.modals__search
+		.modals__search-wrapper
+			min-width: initial

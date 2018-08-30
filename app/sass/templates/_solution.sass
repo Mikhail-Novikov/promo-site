@@ -1,0 +1,74 @@
+.solution__block
+	.sb-text
+		color: #10121a
+		font-size: 16px
+		letter-spacing: 0.48px
+		line-height: 24px
+		padding-right: 75px
+.price-old
+	color: #10121a;
+	font-family: 'Stem-Bold'
+	font-size: 35px
+	letter-spacing: 7px;
+	line-height: 32px;
+.price_new
+	@extend .color-theme
+	font-family: "Stem-Bold"
+	font-size: 25px
+	letter-spacing: 5px
+	line-height: 31px
+.delete
+	position: relative
+	&:before
+		content: ""		
+		border-bottom: 3px solid $color-dark-red
+		position: absolute
+		width: 98%
+		height: 45%
+		transform: rotate(-5deg)
+
+
+.full__solutions__block
+	.full__solutions-item
+	.full__solutions-item-pic
+		position: relative
+		min-height: 200px
+	.full__solutions-content
+		padding: 25px 30px
+		min-height: 175px
+		display: block
+		text-align-last: left
+		text-align: left		
+		@extend .bgc-theme
+		.fsl-link
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 85%;
+			MARGIN: 0 30px;
+			font-family: "ProximaNova-Bold"
+			color: #fff
+			font-size: 12px
+			letter-spacing: 0.24px		
+		.icon-link-arrow
+			float: right
+
+		&:hover .icon-link-arrow:before
+			background-position: 0px -7px
+
+	.fsl-text
+		color: #ffffff
+		font-family: "ProximaNova-Bold"
+		font-size: 24px
+		letter-spacing: 0.48px
+		line-height: 31px
+		text-align-last: left
+		text-align: left
+
+@media only screen and (max-width : 850px)
+	.solution__block.line-title-section:before
+		display: none
+
+
+
+

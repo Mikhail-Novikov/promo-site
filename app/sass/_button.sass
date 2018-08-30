@@ -1,0 +1,334 @@
+.btn-full
+	width: 100% !important
+
+
+
+.btn
+	color: #fff
+	font-family: "Stem-Bold", sans-serif;
+	font-size: 16px
+	letter-spacing: 1.6px
+	padding: 11px 12px
+	transition: 0.3s
+	text-transform: initial
+
+
+.color-theme-red
+	.btn-bg
+		@extend  .bgc-theme
+		&:hover
+			border-color: $color-dark-red * 1.3
+			background-color: $color-dark-red * 1.3
+		&:active
+			color: #fff !important			
+			border-color: $color-dark-red * 1.3
+			background-color: $color-dark-red * 1.3
+
+.color-theme-blue
+	.btn-bg
+		@extend  .bgc-theme
+		&:hover
+			color: #fff !important		
+			border-color: $color-dark-blue* 1.3
+			background-color: $color-dark-blue * 1.3	
+		&:active
+			color: #fff !important			
+			border-color: $color-dark-blue * 1.3
+			background-color: $color-dark-blue * 1.3
+
+.color-theme-red
+	.btn-op
+		background-color: white !important
+		color: #10121a
+		font-size: 15px
+		letter-spacing: 0.56px
+		padding: 11px 12px
+		border: 3px solid $color-dark-red
+		opacity: 1
+		transition: 0.3s
+		text-transform: uppercase
+		&:hover
+			color: #fff !important		
+			border-color: $color-dark-red
+			background-color: $color-dark-red !important			
+		&:active
+			color: #fff !important			
+			border-color: $color-dark-red
+			background-color: $color-dark-red !important
+
+.color-theme-blue
+	.btn-op
+		background-color: white 
+		color: #10121a
+		font-size: 15px
+		letter-spacing: 0.56px
+		padding: 11px 12px
+		border: 3px solid $color-dark-blue
+		opacity: 1
+		transition: 0.3s
+		text-transform: uppercase
+		&:hover
+			color: #fff !important		
+			@extend  .bgc-theme
+		&:active
+			color: #fff !important			
+			@extend  .bgc-theme
+
+
+.btn-white	
+	background-color: white !important
+	@extend  .color-theme	
+	font-family: "Stem-Bold", sans-serif;
+	font-size: 16px
+	padding: 12px 32px !important
+	border: 1px solid transparent
+	opacity: 1
+	transition: 0.3s
+	text-transform: initial
+	color: #005cff
+	font-size: 12px
+	letter-spacing: 1.2px
+	&:hover
+		color: #fff
+	&:active
+		color: #fff 
+
+
+.btn-phone
+	padding: 0 20px
+	line-height: 40px
+	height: 40px
+	position: relative
+	background-color: #fbfbfb
+	border-radius: 30px
+	width: 200px
+	&:after
+		content: ''
+		position: absolute
+		left: 12px
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		width: 20px
+		height: 20px
+		background: url("../svg/sprite/phone.png") no-repeat	 	
+	&:hover:after
+		left: 13px	
+		transition: 0.3s			
+
+.specs-items__phone-block
+    position: relative;
+    display: inline-block;
+.specs-items__show-phone
+	display: none;
+	background: #6398b7
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-radius: 30px
+	color: #fff;
+	cursor: pointer;
+.specs-items__phone-block:hover .specs-items__show-phone
+    display: block;
+
+//--------------------------------------
+.swiper-pagination	
+	max-width: 130px
+	height: 21px
+	margin-left: -65px
+	left: 50% !important
+	z-index: 100
+	overflow: hidden
+
+.swiper-button
+	width: 165px
+	margin: 0 auto 12px
+	overflow: hidden
+	position: relative
+	z-index: 11
+.swiper-news-button-next
+	float: right
+	outline: none	
+	svg
+		@extend  .svg-theme-fill	
+	&:hover	svg
+		@extend  .svg-theme
+
+.swiper-news-button-prev
+	float: left
+	outline: none
+	svg
+		@extend  .svg-theme-fill		
+	&:hover	svg
+		@extend  .svg-theme	
+
+.swiper-pagination-bullet-active
+	background-color: #000
+.swiper-pagination-bullet
+	background-color: #7c7c7c
+	width: 12px
+	height: 12px
+	margin: 0 6px
+
+.swiper-button-middle
+	position: absolute
+	height: 1px
+	top: 50%
+	margin-top: -12px
+	width: 100%
+	z-index: 3
+	left: 0
+	.swiper-news-button-next
+		margin-right: 35px
+	.swiper-news-button-prev
+		margin-left: 35px
+
+//-------------------------------
+.orange-btn
+	color: #ffffff;
+	font-family: 'ptsans bold', sans-serif;
+	font-size: 13px;
+	text-transform: initial
+	width: 126px;
+	height: 35px
+	line-height: 32px
+	border-radius: 4px;
+	background-color: #ff8528;
+	transition: 0.3s
+	&:hover	
+		background-color: #d27026
+.orange-btn.disabled
+	background-color: #9b9b9b;
+	&:hover
+		background-color: #afafaf		
+
+.read-more-btn
+	color: #5f94b4;
+	font-family: 'ptsans bold', sans-serif;
+	font-size: 13px;
+	text-decoration: underline;
+
+.article-link
+	color: #6398b7
+	span
+		padding: 0 0 0 0
+		color: #6398b7
+		font-size: 14px
+	&:hover
+		opacity: 0.8
+		transition: 0.3s
+		color: #89afc6	
+	svg
+		font-size: 9px	
+		fill: #6398b7
+		margin-left: 0
+
+// Кнопки collapse - readmore
+	
+.gk-collapse
+	display: block
+	text-align: center
+	position: relative
+	&:hover
+		text-decoration: underline
+	&:after
+		content: "";
+		width: 15px;
+		height: 15px;
+		vertical-align: middle
+		display: inline-block
+		margin: 1px 0 0 3px;
+		background: url(../svg/sprite/gk-sprite-slider.png) no-repeat center;
+		background-position: -25px -60px;
+
+.gk-collapse.open:after
+	background-position: -6px -60px;
+//close-modal
+.icon-close-modal
+	position: relative;
+	&:before
+		content: ""
+		display: inline-block
+		background-image: url(../sprite/close-sprite-modal.png)
+		background-position: -1px -44px
+		width: 35px
+		height: 35px
+		position: absolute
+		top: 0
+		left: 0
+	&:hover:before
+		background-position: -1px -5px		
+
+// Стрелки и точки слайдеров
+=arrow-prev-h20-white($deg)
+	display: block
+	width: 13px
+	height: 13px
+	border: 3px solid #fff
+	border-width: 0 0 3px 3px
+	transform: rotate($deg)
+	&:hover
+		border-color: #5f94b4
+		transition: 0.3s
+
+=arrow-prev-h20-gray($deg)
+	display: block
+	width: 15px
+	height: 15px
+	border: 2px solid #abb2b7
+	border-width: 0 0 2px 2px
+	transform: rotate($deg)
+	&:hover
+		border-color: #5f94b4
+		transition: 0.3s
+
+=full-screen()
+	background: url(../img/full-screen.png) no-repeat top
+	width: 24px
+	height: 24px
+	display: inline-block
+
+=arrow-right($deg, $color , $height , $width)
+	content: ''
+	display: inline-block
+	width: $height
+	height: $height
+	border: 2px solid $color
+	border-width: 0 0 $width $width
+	transform: rotate($deg)
+	transition: 0.3s
+	
+.icon-arrow-back
+	color: #d4d4d4
+	font-size: 16px
+	letter-spacing: 1.6px
+	transition: 0.3s
+	display: block
+	&:before
+		+arrow-right(45deg, #d1d1d1 , 11px , 3px)
+		margin-right: 6px
+
+	&:hover
+		color: $color-dark-blue	
+		&:before
+			border-color: $color-dark-blue	
+
+.icon-link-arrow
+	position: relative;
+
+
+.icon-link-arrow:before
+	content: ""
+	display: inline-block
+	background-image: url(../sprite/link-arrow-sprite.png)
+	background-position: 0px -23px
+	width: 38px
+	height: 15px
+	position: absolute
+	top: 0
+	right: 0
