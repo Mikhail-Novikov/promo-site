@@ -51,8 +51,13 @@
     "gulp": "^3.9.1",
     "gulp-debug": "^4.0.0",
     "gulp-if": "^2.0.2",
+    "hoek": "^5.0.4",
     "if": "^2.0.0",
+    "lodash": "^4.17.10",
+    "mime": "^2.3.1",
     "series": "^0.3.3",
+    "sshpk": "^1.14.2",
+    "static-eval": "^2.0.0",
     "stream-combiner2": "^1.1.1"
   }
 }
