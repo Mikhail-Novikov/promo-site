@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.121 35.121">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+      }
+      .cls-1:hover{
+        stroke: #005cff;
+      }
+    </style>
+  </defs>
+  <g id="Group_248" data-name="Group 248" transform="translate(-1222.939 -68.939)">
+    <line id="Line_72" data-name="Line 72" class="cls-1" x1="33" y2="33" transform="translate(1224 70)"/>
+    <line id="Line_73" data-name="Line 73" class="cls-1" x1="33" y1="33" transform="translate(1224 70)"/>
+  </g>
+</svg>

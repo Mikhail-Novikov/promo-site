@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Введите пароль"
+AuthUserFile /home/h56591/data/realms/er.htpasswd
+Require valid-user

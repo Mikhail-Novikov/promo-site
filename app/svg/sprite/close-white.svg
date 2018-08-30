@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.121 35.121">
+  <defs>
+    <style>
+      .close-modal {
+        fill: none;
+        
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Group_279" data-name="Group 279" transform="translate(-1222.939 -68.939)">
+    <line id="Line_72" data-name="Line 72" class="cls-1" x1="33" y2="33" transform="translate(1224 70)"/>
+    <line id="Line_73" data-name="Line 73" class="cls-1" x1="33" y1="33" transform="translate(1224 70)"/>
+  </g>
+</svg>
