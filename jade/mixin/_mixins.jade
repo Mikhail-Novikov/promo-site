@@ -1,0 +1,78 @@
+
+mixin projectsBlock(imageName)
+	.swiper-slide
+		a(href="#").projects__last-item
+			.pli-t.posr
+				p.projects__last-item-date
+					|13.09.17
+				img(src='img/projects/#{imageName}.png' alt='')
+				.pli-overlay
+					.dt
+						.dtc.text-center ЧИТАТЬ ДАЛЬШЕ
+
+			.projects__last-item-descr    
+				h3 ПРОЕКТ "ТАНЦЫ" НА ТНТ
+				p Аренда света и прокат светового оборудования
+
+mixin projectsTourBlock(imageName)
+	.projects__last-item
+		p.projects__last-item-date
+			|13.09.17
+		img(src="img/projects/#{imageName}.png", alt="")
+		.projects__last-item-descr    
+			h3 ПРОЕКТ "ТАНЦЫ" НА ТНТ
+			p.mb-20 Аренда света и прокат светового оборудования
+			button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+
+
+mixin homePromoGridEl(imageName)
+	.promo-grid-item
+		figure.promo-item.bgc-red
+			img(src='img/promo/#{imageName}.png', alt='проекты')
+			figcaption
+				.dt
+					.dtc
+						p.date 2017
+						p.promo-item-title ТУР НОЧНЫХ СНАЙПЕРОВ
+						p
+							a.btn.btn-white(href='#') Подробнее 
+
+
+mixin fullSolutionsBlock(imageName, text)
+	.full__solutions-item
+		.full__solutions-item-pic.wrap-img
+			img.js-img-cover(src="img/solutions/#{imageName}.jpg", alt="")
+
+		a(href="#").full__solutions-content.posr
+			p.fsl-text #{text}
+			
+			.text-left.mb-30.mt-10.fsl-link
+				span Узнать подробнее
+				i.icon-link-arrow 
+
+
+mixin equipmentsBlockLight(text)
+	a(href="#").equipments__light__block-k-item.dt
+		.dtc.text-center
+			span #{text}
+
+mixin titleBlockProject(title,counter,text)
+	.pl-30.pl-sm-0.pr-30.pr-sm-0
+		.line-title.mb-10
+			.container
+				h3.title.mb-sm-25 #{title}
+					span.count (#{counter})
+		.container
+			.row.align-items-end
+				p.col-sm-6.projects__block-text.mb-sm-25.mb-30 #{text}
+				a.col-sm-6.icon-link-arrow.text-sm-right.color-theme.d-block.mb-15.mb-sm-35(href="#") Показать все
+					svg.ml-20(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 37.081 13.512')
+						defs
+						g(data-name='Group 292', transform='translate(-413.5 -850.293)')
+							line.cls-1(data-name='Line 36', x2='35.377', transform='translate(413.5 857.09)')
+							path.cls-1(data-name='Path 115', d='M4709.57,249l6.049,6.049-6.049,6.049', transform='translate(-4266.452 602)')
+
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="svg/symbol/sprite.svg#" + name)

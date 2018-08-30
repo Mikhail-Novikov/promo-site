@@ -1,0 +1,54 @@
+
+
+.modals-container.hidden.js-show-job
+
+    table.modal-container_i
+        tr 
+            td
+                .box-modal.posr
+                    .modal-close.js-btn-close-modal 
+                        svg(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 35.121 35.121")
+                              defs
+                                style.
+                                  .cls-1 {
+                                  fill: none;
+                                  stroke: #fff;
+                                  stroke-width: 3px;
+                                  }
+                              |   
+                              g#Group_248(data-name="Group 248", transform="translate(-1222.939 -68.939)")
+                                line#Line_72.cls-1(data-name="Line 72", x1="33", y2="33", transform="translate(1224 70)")
+                                |     
+                                line#Line_73.cls-1(data-name="Line 73", x1="33", y1="33", transform="translate(1224 70)")
+    
+                    .modals__callback 
+                        .modals__callback-wrapper
+                            h2.display-4.text-center.mb-5 Отправить резюме
+
+                            form.js-form-validate.services-form(action="" validate)
+                                .form-group
+                                    .row
+                                        .col-12.mb-15
+                                            label.small(for='c_nic') Ваше имя
+                                            input#c_nic.form-control(type='text' name="nic" placeholder="Ваше имя")
+
+
+                                        .col-12.mb-15
+                                            label.small(for='c_tel') Номер телефона
+                                            input#c_tel.form-control.js-mask(type='tel' name="phone" placeholder="+7 (---) --- -- --")
+
+                                        .col-12.mb-15
+                                            label.small(for='c_email') E-mail
+                                            input#c_email.form-control(type='email' name="email" placeholder="")
+
+                                        .col-12.mb-15
+                                            label.small(for='c_email') Сообщение
+                                            textarea#c_text.form-control(type='text' name="messages" placeholder="")
+
+                                        .col-12.mb-15
+                                          label.psevd-upload(for='uploaded_file') ПРИКРЕПИТЬ ФАЙЛ
+                                          input#uploaded_file.uploaded_file(type='file', name='uploaded_file')                                          
+
+
+                                .text-center
+                                    button.btn.btn-bg.js-form-send.w255(type='submit' disabled="disabled") ПОЗВОНИТЬ МНЕ

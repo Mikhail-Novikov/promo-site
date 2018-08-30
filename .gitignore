@@ -1,0 +1,9 @@
+/node_modules/
+/public/
+/**/*.psd
+/**/Thumbs.db
+package-lock.json
+package.json
+gulpfile.js
+bower.json
+.bowerrc

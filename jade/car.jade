@@ -1,0 +1,441 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/car/bg-car-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Оборудование
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+        .repeat-grid.mb-45.mb-sm-65
+
+
+        section.section.mb-65.car__block
+            .container
+                h3.text-center.mb-xss-55.fz-18.mb-40 Предлагаем аренду грузовые авто  для перевозки концертного оборудования
+            .js-two-slider.swiper-container.container.car-two-slider
+                .swiper-wrapper.mb-35.mb-xss-35.mb-sm-0
+                    .swiper-slide.bg-white.box-sh-car-block
+                        .car__block-item
+                            figure.car__block-item-pic
+                                img(src="img/car/car1.png", alt="")  
+                                                            
+                                figcaption.cbi-pic-descr
+                                    p.fz-12 Грузопассажирский автомобиль
+                                    p.fz-18.ff-stem-b МАН TGL 12.180
+
+                            .posr        
+                                .slider.js-car-slider.swiper-container.b-25.ml-65.mr-65.d-none.d-sm-block
+                                    .swiper-wrapper.w-80
+                                        .swiper-slide
+                                            a(href="img/services/sptrg1.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg1.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg2.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg2.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="" data-lightbox="example-set")
+                                                img(src="img/services/sptrg3.jpg", alt="")
+
+                                        .swiper-slide
+                                            a(href="img/services/sptrg4.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg4.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg1.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg1.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg2.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg2.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="" data-lightbox="example-set")
+                                                img(src="img/services/sptrg3.jpg", alt="")
+
+                                        .swiper-slide
+                                            a(href="img/services/sptrg4.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg4.jpg", alt="")
+
+
+
+
+                                .swiper-button-middle.d-none.d-sm-block
+                                    .swiper-news-button-next
+                                        +icon('right-arrow-red','swiper-btn-icon')
+                                    .swiper-news-button-prev
+                                        +icon('left-arrow-red','swiper-btn-icon')
+
+                            .car__block-item-list
+                                p.pb-45.pb-xss-55.mb-25.cbi-brd.text-center.fz-18.ff-stem-b Автомобиль предназначен для перевозки оборудования и техперсонала     
+
+                                ul
+                                    li Кабина
+                                    li 6 мест (+1 водитель)
+                                ul
+                                    li Грузоподъемность
+                                    li 5 тонн
+                                ul
+                                    li Гидролифт
+                                    li 1 тонна
+
+                                ul
+                                    li Длина
+                                    li 5.3 метра
+
+                                ul
+                                    li Ширина 
+                                    li 2.45 метра
+                                ul
+                                    li Высота
+                                    li 2. 4 метра
+
+                                ul
+                                    li Объём
+                                    li 32 куб. метра
+
+                                a.btn.btn-bg.js-callback-arenda-modal(href="#") АРЕНДА ТРАНСПОРТА
+
+
+
+
+                    .swiper-slide.bg-white.box-sh-car-block                          
+                        .car__block-item  
+                            figure.car__block-item-pic
+                                img(src="img/car/car1.png", alt="")  
+                                                            
+                                figcaption.cbi-pic-descr
+                                    p.fz-12 Грузопассажирский автомобиль
+                                    p.fz-18.ff-stem-b МАН TGL 12.180
+                            .posr
+                                .slider.js-car-slider.swiper-container.mb-25.ml-65.mr-65.d-none.d-sm-block
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            a(href="img/services/sptrg1.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg1.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg2.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg2.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="" data-lightbox="example-set")
+                                                img(src="img/services/sptrg3.jpg", alt="")
+
+                                        .swiper-slide
+                                            a(href="img/services/sptrg4.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg4.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg1.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg1.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="img/services/sptrg2.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg2.jpg", alt="")
+                                        .swiper-slide
+                                            a(href="" data-lightbox="example-set")
+                                                img(src="img/services/sptrg3.jpg", alt="")
+
+                                        .swiper-slide
+                                            a(href="img/services/sptrg4.jpg" data-lightbox="example-set")
+                                                img(src="img/services/sptrg4.jpg", alt="")
+
+                                .swiper-button-middle.d-none.d-sm-block
+                                    .swiper-news-button-next
+                                        +icon('right-arrow-red','swiper-btn-icon')
+                                    .swiper-news-button-prev
+                                        +icon('left-arrow-red','swiper-btn-icon')
+
+                        
+                            .car__block-item-list
+                                p.pb-45.pb-xss-55.mb-25.cbi-brd.text-center.fz-18.ff-stem-b Автомобиль предназначен для перевозки оборудования и техперсонала                                                           
+                                ul
+                                    li Кабина
+                                    li 6 мест (+1 водитель)
+                                ul
+                                    li Грузоподъемность
+                                    li 5 тонн
+                                ul
+                                    li Гидролифт
+                                    li 1 тонна
+
+                                ul
+                                    li Длина
+                                    li 5.3 метра
+
+                                ul
+                                    li Ширина 
+                                    li 2.45 метра
+                                ul
+                                    li Высота
+                                    li 2. 4 метра
+
+                                ul
+                                    li Объём
+                                    li 32 куб. метра
+                                    
+                                a.btn.btn-bg.js-callback-arenda-modal(href="#") АРЕНДА ТРАНСПОРТА
+
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+
+        section.section.mb-80.car__descriptions__block
+            .js-four-slider.swiper-container.container
+                .swiper-wrapper.mb-35.mb-lg-0
+                    .swiper-slide
+                        table.cardescr__block-item.text-center
+                            tr
+                                td(colspan="2") 
+                                    .mb-0
+                                        h4.cardescr-title.mb-20 Минимальное время работы
+                                 
+                                        p.mb-20 по Мск. до ТТК и 10 км. от МКАДа 
+                                    
+                                        p.color-dark-red.mb-20 6 часов
+                                    
+                                        p.color-dark-red.mb-0 + 1 час 800 руб./час.
+                            tr
+                                td.cardescr-b
+                                    .d-flex
+                                        .col.ff-stem-b Более 10 км. от МКАДа
+                                        .col
+                                            p.ff-stem-b.color-dark-red.mb-0 +20 руб/км 
+                                            p.color-dark-red.mb-0 5600руб. 
+
+                    .swiper-slide
+                            table.cardescr__block-item.text-center
+                                tr
+                                    td
+                                        h4.cardescr-title.mb-20 Минимальное время работы с въездом в ТТК до Садового кольца 
+                                 
+                                        p.mb-20 ГАЗон — въезд круглосуточно
+                                    
+                                        p.fz-16.ff-stem-b.color-dark-red.mb-20 7 часов
+                                    
+                                        p.color-dark-red.mb-20 + 1 час 850 руб./час
+
+                                        p.color-dark-red.mb-0 6800руб.
+
+
+                    .swiper-slide
+                            table.cardescr__block-item.text-center
+                                tr
+                                    td
+                                        h4.cardescr-title.mb-20 Аренда на мероприятие в пределах МКАД и 10 км от МКАДА
+                                 
+                                        p.mb-20 Смена не более 24ч.
+                                    
+                                        p.fz-16.ff-stem-b.color-dark-red.mb-20 свыше 750 руб./час
+                                    
+                                        p.color-dark-red.mb-0  18 000руб
+
+                    .swiper-slide
+                            table.cardescr__block-item.text-center
+                                tr
+                                    td
+                                        h4.cardescr-title.mb-20 Работа в туре
+                                 
+                                        p.mb-20 Более двух суток
+                                    
+                                        p.fz-16.ff-stem-b.color-dark-red.mb-20 25 руб.км.
+                                    
+                                        p.color-dark-red.mb-0 + 5000 руб./сутки
+
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+
+        section.section.mb-75.adv__block
+            h3.text-center.fz-18.mb-xss-55.mb-40.pl-15.pr-15 Взяв в аренду наши автомобили Вы получаете: 
+            .js-four-slider.swiper-container.container
+                .swiper-wrapper
+                    .swiper-slide
+                        .adv__block-item
+                            p.advi-number 01
+                            p.advi-text Удобный и вместительный транспорт, предназначенный именно для перевозки концертного оборудования и персонала
+                    .swiper-slide
+                        .adv__block-item
+                            p.advi-number 02
+                            p.advi-text Профессионального водителя, который понимает всю ответственность прокатной деятельности
+                    .swiper-slide
+                        .adv__block-item
+                            p.advi-number 03
+                            p.advi-text Транспорт позволяющий передвижение по МКАДу в любое время суток без пропуска. ГАЗон имеет пропуск в центр в любое время
+                    .swiper-slide
+                        .adv__block-item
+                            p.advi-number 04
+                            p.advi-text Все авто оборудованы системой GPS мониторинга, которая позволяет видеть нахождение вашего персонала и оборудования в реальном времени
+
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+            
+        .line-center-title.mb-45
+            .container
+                h2.display-3.title.text-center Отзывы и рекомендации
+
+        section.section.mt-75.bg-white.bg-advise
+
+            .advise__block.mb-65                   
+                .js-advise-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+                                    
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+        .line-center-title.mb-sm-100.mb-40
+            .container
+                h2.display-4.text-center Партнёры
+
+        section.section.mb-60.mb-xss-90.bg-white
+
+            .partner__block
+                .js-partner-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/about/partn1.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn2.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn3.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn4.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn5.png", alt="")
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+
+        .container
+            .border-b
+                
+    include templates/modals-callback.jade
+    include templates/modals-arenda.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+
+
+
+
+
+
+
+
+

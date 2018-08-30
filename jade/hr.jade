@@ -1,0 +1,82 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/bg-hr-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title ВАКАНСИИ
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Оборудование
+
+        .repeat-grid.mb-45.mb-sm-65                        
+
+        section.mb-xss-80.mb-45.mb-sm-60.posr
+            .container
+                h2.title.text-left.text-xss-center.mb-30.mb-sm-45.ml-0 ХОТИТЕ РАБОТАТЬ С НАМИ?     
+                .row.mb-sm-55.mb-35
+                    .col-md-2.col-xl-3
+                    .col-md-8.col-xl-6.lead.ff-stem-r Наши специалисты подробно расскажут обо всем, что может понадобиться для проведения вашего шоу. Вам достаточно просто описать замысел представления. А если замысла у вас нет – мы сами придумаем и предложим вам несколько вариантов режиссуры.
+                    .col-md-2.col-xl-3
+                .text-xss-center
+                    a.btn.btn-bg.d-inline-block.js-callback-job-modal.w255(href="#") ОТКРЫТЫЕ ВАКАНСИИ
+
+
+    .container
+        .border-b
+
+
+    include templates/modals-job.jade
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+

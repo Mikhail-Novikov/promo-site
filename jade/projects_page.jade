@@ -1,0 +1,162 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/projects/bg-projects-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Услуги
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-theme 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+        .repeat-grid.mb-45.mb-sm-65 
+
+
+
+        section.section.pb-sm-70.pb-45.projects__block__page.posr
+            .container
+                h3.title.mb-45.mb-sm-55.text-xss-center 15 апреля 2016
+
+
+            .row.js-left-offset
+                .col-xss-12.col-sm-5.col-md-3.mb-30.mb-sm-0
+                    .js-conatacts-map-descr-slider.swiper-container
+                        .swiper-wrapper.mb-30
+                            .swiper-slide
+                                .equipments-page-item-pic
+                                    img(src="img/equipments/eqpsl.png", alt="")
+                            .swiper-slide
+                                .equipments-page-item-pic
+                                    img(src="img/equipments/eqpsl.png", alt="")
+                            .swiper-slide
+                                .equipments-page-item-pic
+                                    img(src="img/equipments/eqpsl.png", alt="")
+
+                            .swiper-slide                                    
+                                .equipments-page-item-pic
+                                    img(src="img/equipments/eqpsl.png", alt="")
+                        .swiper-button
+                            .swiper-news-button-next
+                                +icon('right-arrow-red','swiper-btn-icon')
+                            .swiper-news-button-prev
+                                +icon('left-arrow-red','swiper-btn-icon')
+
+                        .swiper-pagination
+
+                .col-xss-12.col-sm-7.col-md-5.pl-15.pl-sm-0.mb-20.mb-sm-0
+                    p.pp-text Группа "Ночные снайперы" после выпуска альбома "Выживут только влюблённые" начала тур по городам России: 
+
+                    ul.pp-list
+                        li Дубна, ДК "Октябрь"
+                        li Обнинск, ГДК
+                        li Рязань, Рязанская областная филармония, КЗ им. Есенина
+                        li Королёв, ЦДК им. Калинина
+                        li Липецк, Областной центр культуры, народного творчества
+                        li Тамбов, Тамбовский драматический театр
+                        li Курск, Городской концертный зал ДШИ 6
+                        li Белгород, ДК БелГУ
+                        li Орел, Центр спортивно-зрелищных мероприятий
+                        li Тула, ДК Железнодорожников
+                        li Брянск, Цирк
+
+                .col-sm-12.col-md-4.pl-0.bgc-gray-lite.pt-40
+                    .line-title-small.mb-sm-10.mb-0
+                        
+                        h3.title.pl-40 ОБОРУДОВАНИЕ
+                    .pp-r-wrap.row
+                        dl.col-xss-9.col-sm-3.col-md-12
+                            dt.pp-r-title Аренда звука и прокат звукового оборудования
+                                dd.pp-r-item 04 x L-acoustics MTD 112
+                                dd.pp-r-item 04 x MIDAS Venice 240
+
+                        dl.col-xss-9.col-sm-3.col-md-12
+                            dt.pp-r-title Акустические системы
+                                dd.pp-r-item  MARTIN AUDIO F15+
+  
+
+                        dl.col-sm-9.col-md-12
+                            dt.pp-r-title Аренда света и прокат светового оборудования
+                                dd.pp-r-item 18 x DIALighting Pro 5R Beam
+                                dd.pp-r-item 04 x Roxton Spot 575 Tour series EXTRA
+
+                        dl.col-sm-9.col-md-12
+                            dt.pp-r-title Аренда света и прокат светового оборудования
+                                dd.pp-r-item  Экран прямой проекции MONOBLOX 64
+
+
+
+        section.section.pb-70.projects__block
+            .container
+                h3.title.mb-25.mb-sm-55.text-xss-center ДРУГИЕ ПРОЕКТЫ
+
+
+
+            include templates/projects-page-block.jade
+
+
+
+
+        section.section.mt-50.mb-70.presentaton__block.bg-presentation
+            .bg-presentation-mobile.d-block.d-md-none
+            .row
+                .container.text-center.text-md-left
+                    .d-inline-block
+                        h3.text-left.presentaton__block-title.mb-15 Презентация
+                        p.text-left.text.mb-25 Посмотрите нашу презентацию
+                        a.btn.btn-white.d-block(href="#") СКАЧАТЬ
+
+        .container
+            .border-b
+
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+

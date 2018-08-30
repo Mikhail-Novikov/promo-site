@@ -1,0 +1,95 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner.mb-45.mb-sm-65
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/solutions/bg-fsolutions.promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title КОНСУЛЬТАЦИИ
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+
+
+
+        section.section.mb-60.full__solutions__block
+
+            .js-full-solutions-slider.swiper-container.container
+                .swiper-wrapper.mb-50.mb-sm-0
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl1', 'Свадьба, частное мероприятие до 50 чел.')
+
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl2', 'Частное мероприятие до 300 человек')
+
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl3', 'Частное мероприятие, корпоратив до 1000 чел.')
+
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl4', 'Кассовый концерт ')
+
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl5', 'Уличные мероприятия')
+
+                    .swiper-slide                    
+                        +fullSolutionsBlock('fsl6', 'Фестивали')
+
+
+
+                .swiper-pagination
+
+        .container
+            .border-b                   
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+
