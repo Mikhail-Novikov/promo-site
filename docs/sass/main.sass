@@ -1,0 +1,468 @@
+@import "mixins"
+@import "vars"
+@import "bootstrap/bootstrap"
+
+@import "fonts"
+
+@import "button"
+
+
+@import "lib/_animated.sass"
+@import "lib/_arctical-modal.sass"
+
+@import "templates/_promo.sass" 
+@import "templates/_project.sass"
+@import "templates/_advise.sass"
+@import "templates/_our-instagramm.sass"
+@import "templates/_about.sass"
+@import "templates/_services.sass"
+@import "templates/_equipment.sass"
+@import "templates/_contacts.sass"
+@import "templates/_car.sass"
+@import "templates/_solution.sass"
+@import "templates/_modals.sass"
+@import "templates/_lightbox.sass"
+@import "../svg/symbol/sprite"
+
+/* @import "mixins" */
+
+*::-webkit-input-placeholder  
+	color: #4a5359
+	font-size: 13px
+	opacity: 1
+
+*:-moz-placeholder
+	color: #4a5359
+	font-size: 13px
+	opacity: 1
+
+*::-moz-placeholder
+	color: #4a5359
+	font-size: 13px
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #4a5359
+	font-size: 13px	
+	opacity: 1 
+*
+	box-sizing: border-box
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid  
+	color: #666
+body input:focus::-webkit-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+
+body input:focus::-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+body input:focus:-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+body input:focus:-ms-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease	
+
+body textarea:focus::-webkit-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+body textarea:focus::-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+body textarea:focus:-moz-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+body textarea:focus:-ms-input-placeholder
+	opacity: 0
+	transition: opacity 0.3s ease
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	background-attachment: fixed
+	&.no-scroll
+		overflow: hidden
+		margin-right: 17px
+
+#preloader
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	z-index: 1001
+	i
+		font-size: 70px
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -35px 0 0 -35px
+.content
+	position: relative
+.no-page
+
+
+.overlay, .overlay-success
+	height: 100%
+	left: 0
+	opacity: 0.50
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 10050
+	background-color: #000
+	display: none
+
+
+.overlay-modals
+	display: none
+	height: 100% 
+	left: 0
+	opacity: 0.50
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: 1000
+	background-color: rgba(0,0,0,0.7)
+.hidden
+	display: none
+.full-container
+	width: 100%
+.link-white
+	color: #ffffff
+	font-family: "Stem-Bold"
+	font-size: 18px
+	letter-spacing: 1.8px
+	.arrow-right:after
+		+arrow-right(-135deg , #fff , 10px , 2px)
+		margin-left: 10px
+		transition: border-color 0.3s
+	&:hover .arrow-right:after
+		border-color: #2ec1ff 
+
+.link-red
+	color: #ae2020
+	font-size: 16px
+	letter-spacing: 0.48px
+	line-height: 18px
+	+hov-a( none,  $color-dark-blue)
+		
+.title
+	letter-spacing: 3.6px
+
+.line-title-left
+	position: relative
+	&:before
+		content: ''
+		width: 121px
+		height: 2px
+		background-color: #ae2020;
+		display: block
+		position: absolute
+		left: 0
+		bottom: -20px	
+
+.line-center-title
+	position: relative	
+	padding: 1px
+	&:before
+		content: ''
+		width: 121px
+		height: 2px
+		@extend  .bgc-theme
+		display: block
+		position: absolute
+		left: 50%
+		margin-left: -60.5px
+		bottom: -20px
+
+
+.line-title
+	position: relative
+	padding-top: 15px
+	padding-bottom: 15px
+	&:before
+		content: ''
+		width: 13px
+		height: 55px
+		background-color: #000
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+
+	.title
+		margin: 0
+		letter-spacing: 3.6px;
+
+
+.line-title-small
+	position: relative
+	height: 37px
+	line-height: 37px
+	padding-top: 8px
+	padding-bottom: 8px
+	&:before
+		content: ''
+		width: 7px
+		height: 37px
+		background-color: #000
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+	.title
+		margin: 0
+		letter-spacing: 3.6px;
+
+.line-title-section
+	position: relative
+	padding-top: 20px
+	&:before
+		content: ''
+		width: 13px
+		height: 55px
+		background-color: #000
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+
+
+.border-b
+	border-bottom: 1px solid #e1e1e1;
+
+.repeat-grid
+	position: relative
+	height: 1px
+	&:after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 190px
+		left: 0
+		right: 0
+		bottom: -190px
+		background: url(../img/repeat-grid.png) repeat-x 
+//----------------------------
+
+.color-theme-blue
+	.color-theme
+		color: $color-dark-blue 
+	.bgc-theme	
+		background-color: $color-dark-blue 	
+		border-color: $color-dark-blue	
+	.brd-theme
+		border-color: $color-dark-blue	
+
+	.svg-theme
+		stroke: $color-dark-blue
+	.svg-theme-fill			
+		fill: $color-dark-blue 	 			
+	.header
+		.cls-3
+			fill: #005cff
+
+
+.color-theme-red
+	.color-theme	
+		color: $color-dark-red 	
+	.bgc-theme	
+		background-color: $color-dark-red
+		border-color: $color-dark-red
+	.brd-theme
+		border-color: $color-dark-red			
+	.svg-theme
+		stroke: $color-dark-red 
+	.svg-theme-fill			
+		fill: $color-dark-red 	 
+	.header
+		.cls-3
+			fill: $color-dark-red
+
+
+
+.header
+	.h-logo	
+		width: 190px
+		background-color: #10121a 
+		.cls-1
+			fill: #10121a
+
+		.cls-2
+			fill: #fff
+			fill-rule: evenodd
+		.cls-3
+			font-size: 17px
+			font-family: "Stem-Bold"
+
+     
+
+.h-logo, .h-right-descr
+	display: inline-block
+	vertical-align: middle
+
+.h-right-descr	
+	max-width: 100px;
+	padding: 15px
+.h-btn-full
+	height: 110px
+	width: 100%
+.h-fhone
+	color: $color-dark-red
+	+font-size($a-font-sizes)
+	+hov-a( none,  $color-dark-blue)
+	margin-bottom: 7px	
+.h-societ
+	li
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		width: 25px
+		height: 25px
+		svg
+			font-size: 21px
+			transition: 0.2s
+			position: absolute
+			left: 0
+			top: 0
+		&:hover svg
+			font-size: 23px
+		.link
+			margin-left: 35px
+			color: #000
+			+hov-a( none,  $color-dark-blue)
+
+.m__h-link
+	color: #ffffff
+	font-size: 14px
+.m__h-adrees
+	color: #fff
+	opacity: 0.3
+	span
+		font-family: "Stem-Regular"
+		font-weight: 300		
+		font-size: 12px
+		padding-left: 14px
+		padding-right: 14px
+.header__sub-menu .m__h-societ
+	svg
+		font-size: 21px
+	a
+		padding: 3px
+	
+		
+
+.color-theme-red
+	.input-search-wrap input
+		background: url(../img/header/search-bg-lupa.png) no-repeat right center	
+.color-theme-blue
+	.input-search-wrap input
+		background: url(../img/header/search-bg-lupa-blue.png) no-repeat right center
+
+
+input[type="search"]
+	height: 53px
+	width: 100%
+	border-right: none
+	+place(#bdbdbd , 14px)
+
+.m-fhone
+	background-color: transparent
+	outline: none
+	border: none
+
+.h__mobile-fhone
+	@extend .bgc-theme
+	text-align: center
+	padding: 10px 15px
+	margin-top: 10px
+	.h-fhone
+		color: #ffffff
+		font-size: 15px
+		letter-spacing: 0.75px
+//----
+.header__sub-menu
+	background-color: #f2f2f2
+	.container
+		+justify		
+	li
+		line-height: 21px 
+		display: inline-block
+		a
+			color: #10121a
+			font-size: 15px
+			font-family: "Stem-Bold"
+			text-transform: uppercase
+			padding: 11px 8px
+			display: inline-block
+			letter-spacing: 1.5px;
+		
+	li.active a
+		color: #AE2020;
+
+
+//----------------------------
+
+.bg-footer
+	background: url(../img/bg-footer.png) no-repeat 99% -60px 
+	
+.footer
+	.f-menu		
+		li
+			float: left
+			width: 50%
+			margin-bottom: 22px
+
+		a
+			color: #10121a
+			font-family: 'Stem-Bold'
+			font-size: 16px
+			letter-spacing: 1.6px
+			text-transform: uppercase
+	.f-adress 
+		text-align: center
+		p
+			color: #7c7c7c;
+	.f-contacts
+		
+		.link-red
+			font-size: 
+			display: block
+	.h-societ 
+		li:last-child
+			display: block
+			width: auto
+		a
+			color: #7c7c7c
+
+
+.js-form-validate
+	.error 
+		border-color: #ff8a8a
+	i.error
+		position: absolute
+		top: 36px
+		left: 17px
+		background: #fff
+		padding: 10px 11px 
+		color: #ff8a8a
+		font-size: 14px
+		letter-spacing: 0.42px
+		font-style: normal
+
+@import "media" // Всегда в конце
+
+
+
+
