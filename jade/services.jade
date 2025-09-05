@@ -1,0 +1,418 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner.mb-45.mb-sm-65
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/services/bg-services-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Услуги
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+
+
+        section.section.mb-0.mb-xss-65
+
+            .js-three-slider.swiper-container.container
+                .swiper-wrapper.services__block__link
+                    .swiper-slide                    
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl1.jpg", alt="")
+                            .services__block-overlay 
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее
+                                    p.sblc-b Аренда оборудования
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl2.jpg", alt="")
+                            .services__block-overlay
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее
+                                    p.sblc-b Консультации
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl3.jpg", alt="")
+                            .services__block-overlay
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее 
+                                    p.sblc-b Смета мероприятий 
+
+                    .swiper-slide                                       
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl4.jpg", alt="")
+                            .services__block-overlay    
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее 
+                                    p.sblc-b Доставка, монтаж/демонтаж
+
+                        .services__block-link.wrap-img
+
+                            img.js-img-cover(src="img/services/sl5.jpg", alt="")
+                            .services__block-overlay 
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее    
+                                    p.sblc-b Программирование
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl6.jpg", alt="")
+                            .services__block-overlay    
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее     
+                                    p.sblc-b Техническая поддержка
+
+                    .swiper-slide                                    
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl7.jpg", alt="")
+                            .services__block-overlay  
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее 
+                                    p.sblc-b Репетиции шоу на нашей базе
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl8.jpg", alt="")
+                            .services__block-overlay 
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее            
+                                    p.sblc-b Разработка шоу 
+
+                        .services__block-link.wrap-img
+                            img.js-img-cover(src="img/services/sl9.jpg", alt="")
+                            .services__block-overlay    
+                            a(href="#").services__block-link-content
+                                .dtc
+                                    p.sblc-t.text-left.mb-30.mt-10.icon-link-arrow Узнать подробнее 
+                                    p.sblc-b Создание декораций и механика сцены
+
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+        section.section.mb-sm-120.bgc-gray-lite.services__spectr.pt-sm-95.pb-sm-95.mt-40.mb-40
+            h2.title.text-center 
+            .container
+                .row
+                    .col-md-5.posr
+                        h3.display-3.title.text-left.text-xss-center.mb-35.d-block.d-sm-none Спецтранспорт                        
+                        .js-services-spectransport-slider.swiper-container
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="img/services/spctr1.jpg", alt="")
+                                .swiper-slide
+                                    img(src="img/services/spctr1.jpg", alt="")
+
+
+                            .services__spectr-btn
+                                .swiper-spctr-button-next
+                                .swiper-spctr-button-prev
+                    
+                    .col-md-1.d-none.d-md-block
+                    .col-md-6.text-left.mt-35.mt-sm-50.mt-md-0
+                        .line-title-left.d-none.d-sm-block                          
+                            h2.display-3.title.text-center.text-md-left.mb-50 Спецтранспорт
+                        .js-spectransport-gallery.spectransport-gallery.mb-30.d-none.d-sm-block
+                            .swiper-wrapper.services__block__link
+                                .swiper-slide                    
+                                    .spectransport-gallery-item
+                                        img(src="img/services/sptrg1.jpg", alt="")
+                                .swiper-slide 
+                                    .spectransport-gallery-item
+                                        img(src="img/services/sptrg2.jpg", alt="")
+                                .swiper-slide 
+                                    .spectransport-gallery-item
+                                        img(src="img/services/sptrg3.jpg", alt="")
+                                .swiper-slide                                             
+                                    .spectransport-gallery-item
+                                        img(src="img/services/sptrg4.jpg", alt="")
+
+                            .swiper-button-middle.d-none.d-sm-block
+                                .swiper-news-button-next
+                                    +icon('right-arrow-red','swiper-btn-icon')
+                                .swiper-news-button-prev
+                                    +icon('left-arrow-red','swiper-btn-icon')
+
+
+                        .text-center
+                            a.btn.btn-bg(href="#") ПОДРОБНЕЕ
+
+
+        section.section.pb-120.services__trn
+            h2.title.text-center 
+            
+            .container
+                .row.align-items-center
+                    .col-sm-6.text-left
+                        .line-title-crazy.mb-20.mb-sm-60 
+                            p.small-text Часть услуги "Шоу для Вас"
+                                                 
+                        h2.display-3.title.text-left.mb-25.mb-sm-40 Репетиции
+
+                        p.services__trn-text Проходит репетиция на своей базе (подготовка тура с нуля, в том числе и репетиция).
+
+                        a.btn.btn-bg(href="#") ПОДРОБНЕЕ
+
+                    .col-sm-6                    
+                        .services__video_block.mt-30.mt-sm-0
+                            iframe(width="100%" height="380" src="https://www.youtube.com/embed/dHhKIs1LXJ0&autoplay=1" frameborder="0" allowfullscreen)
+
+
+
+        section.section.bg-work-services.services__work.posr.mb-65.mb-sm-120.pt-sm-95.pb-sm-95.pt-60.pb-60
+            h3.mb-60.mb-sm-80.title.text-center ШОУ ДЛЯ ВАС
+
+
+            .row
+                .col-12
+                    .block.line-right-block.text-center.mb-0.mb-sm-60.wow.slideInRight( data-wow-duration="0.5s" data-wow-delay="0.5s" )
+                        
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw1.png", alt="")
+                                    .services__work-text Анализируем прошлые программы       
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw2.png", alt="")
+                                    .services__work-text Рисуем эскиз (под карандаш)
+
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw3.png", alt="")
+                                    .services__work-text Согласование различных вариантов решений в 3D
+
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw4.png", alt="")
+                                    .services__work-text Производство декораций, закупка оборудования под требования
+
+            .row
+                .col-12                       
+                    .block.line-left-block.text-center.mb-0.mb-sm-60.wow.slideInLeft( data-wow-duration="0.7s" data-wow-delay="0.7s" )
+                    
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw5.png", alt="")
+                                    .services__work-text Репетиция -  3 дня в концертном зале
+
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw6.png", alt="")
+                                    .services__work-text Изготовление брендовой спецодежды
+
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw7.png", alt="")
+                                    .services__work-text Подготовка персонала
+
+                                .services__work-line
+
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw8.png", alt="")
+                                    .services__work-text Покупка авто (в случае необходимости), брендирование
+
+            .row
+                .col-12               
+                    .block.line-left-block.text-center.wow.slideInLeft( data-wow-duration="1s" data-wow-delay="1s" )                     
+                     
+                            .d-inline-block
+                                .services__work-item
+                                    .services__work-pic
+                                        .dt
+                                            .dtc
+                                                img(src="img/services/servw9.png", alt="")
+                                    .services__work-text.fz-19 Сопровождение в туре
+
+            .text-center.d-block.d-sm-none
+                a.btn.btn-bg(href="#") ПОДРОБНЕЕ
+
+
+
+
+        .line-center-title.mb-45
+            .container
+                h2.display-3.title.text-center Отзывы и рекомендации
+
+        section.section.mt-75.bg-white.bg-advise
+
+            .advise__block.mb-65.mb-65                   
+                .js-advise-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+                                    
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+        .line-center-title.mb-45.mt-95
+            .container
+                h2.display-3.title.text-center Партнёры
+
+        section.section.mt-75.bg-white
+
+            .partner__block
+                .js-partner-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/about/partn1.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn2.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn3.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn4.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn5.png", alt="")
+
+
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+

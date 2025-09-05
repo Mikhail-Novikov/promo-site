@@ -1,0 +1,79 @@
+.overlay
+#preloader
+header.header
+    .full-container
+        .row.align-items-center.pl-15.pr-15.p-sm-0
+            .col-xl-3.col-md-4.col-lg-4.col-sm-5.col-9
+                img.gamb.d-inline-block.align-middle.d-sm-none.js-btn-open-menu(src="img/mobile/gamb.png", alt="")
+                a.d-none.d-sm-inline-block(href="/")
+                    include ../svg/h-logo.jade 
+
+                a.d-inline-block.align-middle.d-sm-none(href="/")
+                    img.m-logo-h(src="img/mobile/m-logo-h.png", alt="ZavodShow - всё для шоу")
+
+                span.h-right-descr 
+                    | Техническое обеспечение событий
+
+
+            .col-xl-3.col-md-4.col-lg-4.col-sm-2.d-none.d-sm-block
+                a.h-fhone.d-none.d-sm-none.d-md-block.color-theme(href="tel: +74957201282 ") +7 (495) 720 12 82
+                ul.h-societ
+                    li
+                        a(href="#") 
+                            +icon('tw','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('inst','h-icon')
+                    li
+                        a(href="#")  
+                            +icon('youtube','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('facebook','h-icon')
+                    li.d-none.d-xl-inline-block.d-lg-inline-block.d-md-inline-block
+                        a.link(href="mailto: info@zavodshow.ru") info@zavodshow.ru
+
+            .col-xl-3.col-md-3.col-lg-3.col-sm-4.d-none.d-sm-block                          
+                form
+                    .input-search-wrap
+                        input.form-control.js-search-input( type="search" placeholder="Поиск")
+                            
+            .col-xl-3.col-md-1.col-lg-1.col-sm-1.col-3.text-right.text-sm-left
+                button.btn.btn-bg.h-btn-full.d-lg-none.d-md-none.d-none.d-xl-block.js-callback-modal Обратный звонок
+                button.m-fhone.d-xl-none.m-sm-0.js-callback-modal 
+                    img(src="img/header/mobile-fhone-btn.png", alt="")
+        .h__mobile-fhone.d-block.d-sm-none
+            a.h-fhone.ff-stem-b(href="tel: +74957201282 ") +7 (495) 720 12 82
+
+        nav.header__sub-menu.js-show-modal-menu
+            a.m__h-link.text-center.mt-20.mb-35.d-block.d-sm-none(href="mailto: info@zavodshow.ru") info@zavodshow.ru
+            ul.container
+                li.active
+                    a(href="/about.html") О КОМПАНИИ
+                li
+                    a(href="/services.html") УСЛУГИ
+                li
+                    a(href="/projects_page.html") ПРОЕКТЫ
+                li
+                    a(href="/car.html") ОБОРУДОВАНИЕ
+                li
+                    a(href="/contacts.html") КОНТАКТЫ
+                li
+                    a(href="/hr.html") ВАКАНСИИ
+            .m__h-adrees.text-center.d-block.d-sm-none.mt-45.mb-20
+                span Москва, г. Реутов
+                span ул. Победы д. 20
+            .m__h-societ.text-center.d-block.d-sm-none
+                    li
+                        a(href="#") 
+                            +icon('tw-w','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('inst-w','h-icon')
+                    li
+                        a(href="#")  
+                            +icon('you-w','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('f-w','h-icon')
+include modals-search.jade

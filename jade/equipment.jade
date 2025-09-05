@@ -1,0 +1,145 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/equipments/bg-equipments-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Услуги
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-theme 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+
+        .repeat-grid.mb-45.mb-sm-65
+
+        section.section.pb-50.equipments__block
+            .js-four-slider.swiper-container.container
+                .swiper-wrapper
+                    .swiper-slide
+                        .equipments__block-item
+                            .equipments__block-item-pic.dt
+                                .dtc
+                                    +icon('carts-eqs1','icon-equipments')
+                            .equipments__block-item-descr      
+                                p Аренда света 
+                                    br
+                                    |и прокат светового 
+                                    br
+                                    |оборудования
+
+                                a(href="#").btn.btn-op.btn-full.js-callback-btn ПОДРОБНЕЕ
+                    .swiper-slide
+                        .equipments__block-item
+                            .equipments__block-item-pic.dt
+                                .dtc                                
+                                    +icon('carts-eqs2','icon-equipments') 
+                            .equipments__block-item-descr      
+                                p Аренда звука
+                                    br
+                                    |и прокат звукового 
+                                    br
+                                    |оборудования
+
+                                a(href="#").btn.btn-op.btn-full.js-callback-btn ПОДРОБНЕЕ
+                    .swiper-slide
+                        .equipments__block-item
+                            .equipments__block-item-pic.dt
+                                .dtc
+                                    +icon('carts-eqs3','icon-equipments')
+                            .equipments__block-item-descr      
+                                p Аренда сцены,
+                                    br
+                                    | подиума и сценического 
+                                    br
+                                    |оборудования
+
+                                a(href="#").btn.btn-op.btn-full.js-callback-btn ПОДРОБНЕЕ
+                    .swiper-slide
+                        .equipments__block-item
+                            .equipments__block-item-pic.dt
+                                .dtc
+                                    +icon('carts-eqs4','icon-equipments')
+                            .equipments__block-item-descr      
+                                p Аренда 
+                                    br
+                                    |видеооборудования, 
+                                    br
+                                    |видеоэкрана, видео пульта
+
+                                a(href="#").btn.btn-op.btn-full.js-callback-btn ПОДРОБНЕЕ                
+
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+
+        section.section.mb-sm-70.mb-30.pb-sm-130.pt-sm-105.pt-60.pb-40.bgc-gray-lite
+            
+            .row
+                .container.text-center
+                    .d-inline-block.text-center.pl-15.pr-15
+                        .line-center-title.mb-xss-45
+                        h3.display-3.text-center.color-black.mb-15 Готовые решения
+                        p.text-left.text-xss-center.color-gray.mb-25 Звук, свет, видео, сцена, спецэффекты, генераторы, обогреватели, производство
+                        a.btn.btn-bg.d-block.d-xss-inline-block.w255.pt-10.pb-10(href="#") ПОДРОБНЕЕ
+
+        .container
+            .border-b
+
+
+
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade

@@ -1,0 +1,195 @@
+.promo__inner
+	.breadcrumb
+		justify-content: center
+	.breadcrumb-item a, .breadcrumb-item.active
+		opacity: 0.5
+		color: #ffffff
+		letter-spacing: 2.8px
+.promo__inner-descr
+	font-size: 42px
+	line-height: 1.1
+	color: #ffffff;
+	letter-spacing: 8.4px
+.promo__inner-wrap
+	.promo__inner-pic
+		opacity: 0.3
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		max-width: initial
+		transform: translateX(-50%)
+
+
+.promo__inner
+	min-height: 330px
+	background-color: #000
+	position: relative
+	overflow: hidden
+.promo__inner-title
+	color: #ffffff
+	font-size: 24px
+	font-family: 'Stem-Regular'
+	letter-spacing: 4.8px
+	text-transform: uppercase
+	margin-bottom: 8px
+.promo__inner-c-block
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%) 
+	width: 100%
+	text-align: center
+
+.promo__inner-descr
+	color: #fff
+	text-align: center
+
+
+//--------------------------
+.event__project
+	.title
+		color: #000000
+		font-size: 18px
+		text-transform: uppercase
+		letter-spacing: 3.6px
+		margin-bottom: 50px
+	ul
+		display: inline-block
+	.date, .date-text
+		text-align: left
+	.date
+		color: #ae2020;
+		font-family: 'Stem-Bold'
+		font-size: 30px
+		letter-spacing: 6.8px
+	.date-text
+		color: #000000
+		font-size: 18px
+		text-transform: uppercase
+		font-family: 'Stem-Bold'		
+		letter-spacing: 3.6px
+		max-width: 180px
+	.event__project-content
+		color: #10121a;
+		font-size: 16px;
+		letter-spacing: 0.48px;
+		line-height: 24px
+		margin-bottom: 0
+
+//--------- documents CAROUSEL ----------
+.documents__block
+	.title
+		letter-spacing: 3.6px;
+.carousel-container
+	position: relative
+
+.documents-carousel
+	height: 540px
+	width: 900px
+	margin: 0 auto
+	position: relative
+
+.carousel-image
+	border: 0
+	display: block
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+
+.carousel-feature
+	position: absolute
+	top: -1000px
+	left: -1000px
+	cursor: pointer
+	.carousel-caption
+		position: absolute
+		bottom: 0
+		width: 100%
+		background-color: #000
+	img
+		max-width: 370px
+		max-height: 530px
+
+.tracker-summation-container
+	position: absolute
+	color: white
+	right: 48px
+	top: 230px
+	padding: 3px
+	margin: 3px
+	background-color: #000
+	display: none !important
+
+.tracker-individual-container
+	position: absolute
+	color: white
+	right: 48px
+	top: 210px
+	padding: 0
+	margin: 0
+	display: none !important
+	li
+		list-style: none
+  .tracker-individual-blip
+		margin: 0 3px
+		padding: 0 3px
+		color: white
+		text-align: center
+		background-color: #DDD
+  .tracker-individual-blip-selected
+		color: white
+		font-weight: bold
+		background-color: #000
+
+.documents__block-btn-left
+	position: absolute
+	left: 0
+	top: 50%	
+	margin-top: -18px
+	padding: 10px 7px 6px 14px
+	background-color: $color-dark-red	
+	cursor: pointer
+	text-align: center	
+	&:after
+		+arrow-right(-315deg, #fff , 18px , 3px)
+.documents__block-btn-right
+	position: absolute
+	top: 50%
+	right: 0
+	margin-top: 18px
+	padding: 10px 14px 6px 7px
+	cursor: pointer
+	background-color: $color-dark-red
+	text-align: center
+	&:after
+		+arrow-right(-135deg, #fff , 18px , 3px) 
+
+.box-modal
+	.js-fhoto-modal img
+		width: auto !important
+		height: auto !important		
+
+//partner block
+
+.partner__block
+	.swiper-slide
+		img
+			margin: 0 auto
+
+@media only screen and (max-width : 850px)
+	.event__project .title
+		margin-bottom: 30px
+
+
+@media only screen and (max-width : 360px)
+	.promo__inner-c-block
+		padding-left: 15px
+		padding-right: 15px
+		.promo__inner-title
+			font-size: 14px
+		.promo__inner-descr
+			font-size: 20px
+			letter-spacing: 1.4px
+@media only screen and (min-width : 900px)
+	.js-partner-slider		
+		.swiper-button
+			display: none			

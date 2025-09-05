@@ -1,0 +1,38 @@
+include showSuccess.jade
+footer.footer.bg-footer.pt-xl-70.pb-xl-60.pt-60.pb-30.js-footer
+    .container
+        .row
+            .col-sm-12.col-md-12.col-lg-12.col-xl-2.order-xl-1.mb-30.mb-xl-0
+                img.f-logo.ml-auto.mr-auto.ml-xl-0(src="img/logo-f.png", alt="") 
+
+            .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-2.f-contacts.order-xl-4.text-xl-right.text-center.text-sm-left.mb-35.mb-sm-0 
+                a.link-red.mb-30(href="tel: +74957201282")  +7 (495) 720 12 82   
+
+                ul.h-societ.pl-0
+                    li
+                        a(href="#") 
+                            +icon('tw','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('inst','h-icon')
+                    li
+                        a(href="#")  
+                            +icon('youtube','h-icon')
+                    li
+                        a(href="#") 
+                            +icon('facebook','h-icon')
+                    li.mt-30
+                        a.link.ml-xl-35.ml-0(href="mailto: info@zavodshow.ru") info@zavodshow.ru
+
+            .col-12.col-sm-6.col-md-6.col-lg-6.col-xl-5.order-xl-2.text-center.text-sm-left.mb-sm-0.mb-5 
+                ul.f-menu.pl-xl-85
+                each item in ['О КОМПАНИИ', 'ОБОРУДОВАНИЕ', 'УСЛУГИ', 'ВАКАНСИИ', 'ПРОЕКТЫ', 'КОНТАКТЫ']
+                    li
+                        a(href='#')= item
+
+            .col-12.col-sm-2.col-md-2.col-lg-2.col-xl-3.f-adress.order-xl-3.text-center
+                p Москва, г. Реутов
+
+                p ул. Победы д. 20
+
+               

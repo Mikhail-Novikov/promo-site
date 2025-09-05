@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>ZavodShow - всё для шоу</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <!-- IE 8-->
+    <!--if lt IE 8
+    p.browserupgrade
+      | You are using an 
+      strong outdated 
+      |  browser. Please 
+      a(href='http://browsehappy.com/') upgrade your browser
+      |  to improve your experience.
+    
+    
+    -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="sprite/sprite.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMVuRK48e9494g0NDZUYy5VkDqQHoTNdM"> </script>
+  </head>
+  <body class="color-theme-red">
+    <div class="overlay"></div>
+    <div id="preloader"></div>
+    <header class="header">
+      <div class="full-container">
+        <div class="row align-items-center pl-15 pr-15 p-sm-0">
+          <div class="col-xl-3 col-md-4 col-lg-4 col-sm-5 col-9"><img src="img/mobile/gamb.png" alt="" class="gamb d-inline-block align-middle d-sm-none js-btn-open-menu"><a href="/" class="d-none d-sm-inline-block">
+              <svg data-name="h-logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 200 115" class="h-logo">
+                <defs></defs>
+                <g data-name="Group 293"> 
+                  <g data-name="Group 292">
+                    <path data-name="Path 101" d="M98.7,62.388h15.361V71.62H98.7Zm-59.825,0H1.5V71.62H38.877Zm45.5,0h2.707l.978,5.17,1.429-5.17H92.2l1.429,5.17.978-5.17h2.707l-2.031,9.25h-2.8l-1.617-5.81-1.617,5.81h-2.8Zm-34.162,0h2.858v3.234h3.121V62.388h2.877v9.25H56.193V67.9H53.072v3.741H50.214Zm-9.833,6.167,2.726-.169a2.087,2.087,0,0,0,.357,1.015,1.514,1.514,0,0,0,1.26.564,1.4,1.4,0,0,0,.94-.282A.846.846,0,0,0,46,69.025a.791.791,0,0,0-.32-.639,3.407,3.407,0,0,0-1.466-.526,6.048,6.048,0,0,1-2.67-1.128,2.23,2.23,0,0,1-.808-1.786,2.43,2.43,0,0,1,.414-1.354,2.9,2.9,0,0,1,1.241-1,5.759,5.759,0,0,1,2.275-.357,4.715,4.715,0,0,1,2.707.658,2.83,2.83,0,0,1,1.109,2.087l-2.689.15a1.472,1.472,0,0,0-.451-.9,1.438,1.438,0,0,0-.94-.282,1.2,1.2,0,0,0-.752.207.631.631,0,0,0-.244.508.518.518,0,0,0,.207.395,2.284,2.284,0,0,0,.959.338,12.739,12.739,0,0,1,2.689.808,2.92,2.92,0,0,1,1.184,1.015,2.639,2.639,0,0,1,.376,1.372,2.978,2.978,0,0,1-.489,1.636,3.058,3.058,0,0,1-1.372,1.147,5.449,5.449,0,0,1-2.219.395,4.632,4.632,0,0,1-3.271-.9A3.293,3.293,0,0,1,40.381,68.555Zm61.2-29.95V49.773h1.542a6.753,6.753,0,0,0,2.82-.432,2.965,2.965,0,0,0,1.316-1.523,9.614,9.614,0,0,0,.47-3.553c0-2.162-.357-3.647-1.053-4.437a4.469,4.469,0,0,0-3.516-1.2h-1.579ZM95.261,33.98h9.382a11.088,11.088,0,0,1,4.475.752,7.324,7.324,0,0,1,2.82,2.162,9.2,9.2,0,0,1,1.617,3.271,14.987,14.987,0,0,1,.508,3.967,13.494,13.494,0,0,1-.752,5.076,8.264,8.264,0,0,1-2.068,3.027,6.948,6.948,0,0,1-2.839,1.636,14.487,14.487,0,0,1-3.76.564H95.261V33.98Zm-52.925,0h6.6l4.606,14.7,4.531-14.7h6.411L56.907,54.417H50.063ZM34.985,46.633l-2.256-7.351-2.237,7.351ZM36.3,51.051H29.1l-1,3.365H21.655L29.326,33.98h6.881L43.9,54.417H37.3ZM2.59,33.98H20.452v4.08L9,50.036H20.884v4.4H1.5v-4.23L12.837,38.379H2.59ZM72.023,68.875a.768.768,0,1,0-.545-.94A.755.755,0,0,0,72.023,68.875Zm-.376,1.41a2.228,2.228,0,1,0-1.579-2.726A2.232,2.232,0,0,0,71.647,70.285Zm-1.278,4.757a7.153,7.153,0,1,0-5.058-8.761A7.155,7.155,0,0,0,70.369,75.042Zm-.207.808a7.981,7.981,0,1,0-5.64-9.777A7.99,7.99,0,0,0,70.162,75.85Zm-.094.357a8.35,8.35,0,1,0-5.9-10.228A8.361,8.361,0,0,0,70.068,76.207Zm1.5,1.222a7.475,7.475,0,0,0,1.3,0l1.09,2.181a12.378,12.378,0,0,0,2.482-.658l-.132-2.425a8.089,8.089,0,0,0,1.109-.639l2.031,1.335a12.726,12.726,0,0,0,1.824-1.8l-1.335-2.031a9.388,9.388,0,0,0,.639-1.109L83,72.409c.15-.395.282-.808.395-1.222a10.009,10.009,0,0,0,.263-1.26l-2.181-1.09a7.468,7.468,0,0,0,0-1.3l2.181-1.09A12.719,12.719,0,0,0,83,63.968l-2.425.132a8.09,8.09,0,0,0-.639-1.109l1.335-2.031a12.724,12.724,0,0,0-1.8-1.824l-2.031,1.335a9.39,9.39,0,0,0-1.109-.639l.132-2.425c-.395-.15-.808-.282-1.222-.395a10.008,10.008,0,0,0-1.26-.263l-1.09,2.181a7.473,7.473,0,0,0-1.3,0L70.5,56.748a12.72,12.72,0,0,0-2.482.658l.132,2.425a8.092,8.092,0,0,0-1.109.639L65.01,59.136a12.724,12.724,0,0,0-1.824,1.8l1.335,2.031a9.386,9.386,0,0,0-.639,1.109l-2.425-.132c-.15.395-.282.808-.395,1.222a10.008,10.008,0,0,0-.263,1.26l2.181,1.09a7.473,7.473,0,0,0,0,1.3L60.8,69.909a12.378,12.378,0,0,0,.658,2.482l2.425-.132a10.648,10.648,0,0,0,.639,1.109L63.187,75.4a12.725,12.725,0,0,0,1.8,1.824l2.031-1.335a9.389,9.389,0,0,0,1.109.639L68,78.952c.395.15.808.282,1.222.395a10.006,10.006,0,0,0,1.26.263ZM78.6,45.148a.959.959,0,1,0-.959-.959A.951.951,0,0,0,78.6,45.148Zm0,1.8a2.745,2.745,0,1,0-2.745-2.745A2.736,2.736,0,0,0,78.6,46.953Zm0,6.073a8.818,8.818,0,1,0-8.818-8.818A8.818,8.818,0,0,0,78.6,53.025Zm0,1.034a9.852,9.852,0,1,0-9.852-9.852A9.861,9.861,0,0,0,78.6,54.059Zm0,.432a10.3,10.3,0,1,0-10.3-10.3A10.295,10.295,0,0,0,78.6,54.492Zm2.2.978a10.973,10.973,0,0,0,1.542-.414l2.012,2.237A14.668,14.668,0,0,0,87.1,55.714l-.94-2.858q.592-.536,1.128-1.128l2.858.94a13.7,13.7,0,0,0,1.579-2.745l-2.237-2.012A13.239,13.239,0,0,0,89.9,46.37l2.933-.62a14.835,14.835,0,0,0,.094-1.579,14.546,14.546,0,0,0-.094-1.579L89.9,41.97a10.971,10.971,0,0,0-.414-1.542l2.237-2.012a14.665,14.665,0,0,0-1.579-2.745l-2.858.94q-.536-.592-1.128-1.128l.94-2.858a13.7,13.7,0,0,0-2.745-1.579l-2.012,2.237a13.238,13.238,0,0,0-1.542-.414l-.62-2.877A14.829,14.829,0,0,0,78.6,29.9a14.54,14.54,0,0,0-1.579.094l-.62,2.933a10.972,10.972,0,0,0-1.542.414L72.85,31.1a14.667,14.667,0,0,0-2.745,1.579l.94,2.858q-.592.536-1.128,1.128l-2.858-.94a13.7,13.7,0,0,0-1.579,2.745l2.237,2.012a13.237,13.237,0,0,0-.414,1.542l-2.914.6a14.827,14.827,0,0,0-.094,1.579,14.538,14.538,0,0,0,.094,1.579l2.933.62a10.972,10.972,0,0,0,.414,1.542L65.5,49.961a14.667,14.667,0,0,0,1.579,2.745l2.858-.94q.536.592,1.128,1.128l-.94,2.858a13.7,13.7,0,0,0,2.745,1.579l2.012-2.237a13.234,13.234,0,0,0,1.542.414l.62,2.933a14.826,14.826,0,0,0,1.579.094A14.538,14.538,0,0,0,80.2,58.44Z" transform="translate(37.938 11.426)" class="cls-2"></path>
+                  </g>
+                </g>
+                <text id="_МЫ_ЗА_ШОУ" data-name="#МЫ ЗА ШОУ" transform="translate(38 37)" class="cls-3">
+                  <tspan x="0" y="0">#МЫ ЗА ШОУ</tspan>
+                </text>
+              </svg></a><a href="/" class="d-inline-block align-middle d-sm-none"><img src="img/mobile/m-logo-h.png" alt="ZavodShow - всё для шоу" class="m-logo-h"></a><span class="h-right-descr">
+               
+              Техническое обеспечение событий</span></div>
+          <div class="col-xl-3 col-md-4 col-lg-4 col-sm-2 d-none d-sm-block"><a href="tel: +74957201282 " class="h-fhone d-none d-sm-none d-md-block color-theme">+7 (495) 720 12 82</a>
+            <ul class="h-societ">
+              <li><a href="#"> 
+                  <svg class="icon icon-tw h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#tw"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-inst h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-youtube h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-facebook h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="d-none d-xl-inline-block d-lg-inline-block d-md-inline-block"><a href="mailto: info@zavodshow.ru" class="link">info@zavodshow.ru</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-md-3 col-lg-3 col-sm-4 d-none d-sm-block">                         
+            <form>
+              <div class="input-search-wrap">
+                <input type="search" placeholder="Поиск" class="form-control js-search-input">
+              </div>
+            </form>
+          </div>
+          <div class="col-xl-3 col-md-1 col-lg-1 col-sm-1 col-3 text-right text-sm-left">
+            <button class="btn btn-bg h-btn-full d-lg-none d-md-none d-none d-xl-block js-callback-modal">Обратный звонок</button>
+            <button class="m-fhone d-xl-none m-sm-0 js-callback-modal"> <img src="img/header/mobile-fhone-btn.png" alt=""></button>
+          </div>
+        </div>
+        <div class="h__mobile-fhone d-block d-sm-none"><a href="tel: +74957201282 " class="h-fhone ff-stem-b">+7 (495) 720 12 82</a></div>
+        <nav class="header__sub-menu js-show-modal-menu"><a href="mailto: info@zavodshow.ru" class="m__h-link text-center mt-20 mb-35 d-block d-sm-none">info@zavodshow.ru</a>
+          <ul class="container">
+            <li class="active"><a href="/about.html">О КОМПАНИИ</a></li>
+            <li><a href="/services.html">УСЛУГИ</a></li>
+            <li><a href="/projects_page.html">ПРОЕКТЫ</a></li>
+            <li><a href="/car.html">ОБОРУДОВАНИЕ</a></li>
+            <li><a href="/contacts.html">КОНТАКТЫ</a></li>
+            <li><a href="/hr.html">ВАКАНСИИ</a></li>
+          </ul>
+          <div class="m__h-adrees text-center d-block d-sm-none mt-45 mb-20"><span>Москва, г. Реутов</span><span>ул. Победы д. 20</span></div>
+          <div class="m__h-societ text-center d-block d-sm-none">
+            <li><a href="#"> 
+                <svg class="icon icon-tw-w h-icon">
+                  <use xlink:href="svg/symbol/sprite.svg#tw-w"></use>
+                </svg></a></li>
+            <li><a href="#"> 
+                <svg class="icon icon-inst-w h-icon">
+                  <use xlink:href="svg/symbol/sprite.svg#inst-w"></use>
+                </svg></a></li>
+            <li><a href="#"> 
+                <svg class="icon icon-you-w h-icon">
+                  <use xlink:href="svg/symbol/sprite.svg#you-w"></use>
+                </svg></a></li>
+            <li><a href="#"> 
+                <svg class="icon icon-f-w h-icon">
+                  <use xlink:href="svg/symbol/sprite.svg#f-w"></use>
+                </svg></a></li>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="modals-container hidden js-show-search">
+      <table class="modal-container_i">
+        <tr> 
+          <td>
+            <div class="box-modal posr">
+              <div class="modals__search color-theme-red mt-50 mt-sm-15">
+                <div class="modals__search-wrapper">
+                  <div class="modal-close js-btn-close-modal"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 35.121 35.121">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                          fill: none;
+                          stroke: #fff;
+                          stroke-width: 3px;
+                          }
+                        </style>
+                      </defs>  
+                      <g id="Group_248" data-name="Group 248" transform="translate(-1222.939 -68.939)">
+                        <line id="Line_72" data-name="Line 72" x1="33" y2="33" transform="translate(1224 70)" class="cls-1"></line>    
+                        <line id="Line_73" data-name="Line 73" x1="33" y1="33" transform="translate(1224 70)" class="cls-1"> </line>
+                      </g>
+                    </svg>
+                  </div>
+                  <form class="text-center">
+                    <div class="form-check-wrap d-lg-inline-block text-center mb-sm-75 mb-25"><a href="#" class="form-check">
+                        <input id="city_reg" type="radio" name="check-tag" value="1" class="form-check-input">
+                        <label for="city_reg" class="form-check-label">РЕГИОНЫ И ГОРОДА</label></a><a href="#" class="form-check">
+                        <input id="doer" type="radio" name="check-tag" value="2" class="form-check-input">
+                        <label for="doer" class="form-check-label">ИСПОЛНИТЕЛИ</label></a><a href="#" class="form-check">
+                        <input id="area" type="radio" name="check-tag" value="3" class="form-check-input">
+                        <label for="area" class="form-check-label">ПЛОЩАДКИ</label></a></div>
+                    <div class="input-search-rezult-wrap">
+                      <input type="search" placeholder="ВВЕДИТЕ ТЕГ" class="form-control js-btn-form-search-rezult">
+                      <button type="submit" title="Начать поиск" class="search-btn-submit"></button>
+                    </div>
+                  </form>
+                  <div class="search__rezult">
+                    <div class="tag_rezult">
+                      <p class="fz-16 color-white mb-25">ПОПУЛЯРНЫЕ ТЕГИ</p><a href="#" class="tag__rezult-item"><span># </span><span>егор крид</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев </span></a><a href="#" class="tag__rezult-item"><span># </span><span>любэ</span></a><a href="#" class="tag__rezult-item"><span># </span><span>тимати</span></a><a href="#" class="tag__rezult-item"><span># </span><span>би2</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей пенкин</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев  </span></a><a href="#" class="tag__rezult-item"><span># </span><span>егор крид</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев </span></a><a href="#" class="tag__rezult-item"><span># </span><span>любэ</span></a><a href="#" class="tag__rezult-item"><span># </span><span>тимати</span></a><a href="#" class="tag__rezult-item"><span># </span><span>би2</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей пенкин</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев</span></a><a href="#" class="tag__rezult-item"><span># </span><span>егор крид</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев </span></a><a href="#" class="tag__rezult-item"><span># </span><span>любэ</span></a><a href="#" class="tag__rezult-item"><span># </span><span>тимати</span></a><a href="#" class="tag__rezult-item"><span># </span><span>би2</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей пенкин</span></a><a href="#" class="tag__rezult-item"><span># </span><span>ночные снайперы</span></a><a href="#" class="tag__rezult-item"><span># </span><span>сергей лазарев  </span></a>
+                    </div>
+                    <div class="js-content-rezult content_rezult projects__block swiper-container hidden">
+                      <p class="fz-16 color-white mb-25">РЕЗУЛЬТАТЫ ПОИСКА                          </p>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl1.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl2.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl3.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl4.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl1.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl2.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl3.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                        <div class="swiper-slide"><a href="#" class="projects__last-item">
+                            <div class="pli-t posr">
+                              <p class="projects__last-item-date">13.09.17</p><img src="img/projects/pl4.png" alt=""/>
+                              <div class="pli-overlay">
+                                <div class="dt">
+                                  <div class="dtc text-center">ЧИТАТЬ ДАЛЬШЕ</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="projects__last-item-descr">   
+                              <h3>ПРОЕКТ "ТАНЦЫ" НА ТНТ</h3>
+                              <p>Аренда света и прокат светового оборудования</p>
+                            </div></a></div>
+                      </div>
+                      <div class="swiper-button">
+                        <div class="swiper-news-button-next">
+                          <svg class="icon icon-right-arrow-red swiper-btn-icon">
+                            <use xlink:href="svg/symbol/sprite.svg#right-arrow-red"></use>
+                          </svg>
+                        </div>
+                        <div class="swiper-news-button-prev">
+                          <svg class="icon icon-left-arrow-red swiper-btn-icon">
+                            <use xlink:href="svg/symbol/sprite.svg#left-arrow-red"></use>
+                          </svg>
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <main class="content">
+      <section class="section contacts__block_map pb-40 pb-lg-60">
+        <div class="line-right">
+          <h1 class="title">КОНТАКТЫ </h1><span class="line-right-item"></span>
+        </div>
+        <div class="contacts__block_map-item posr row js-right-offset">
+          <div class="col-sm-7 col-lg-8 col-xl-9 pr-sm-0">
+            <div id="map" data-lat-center="55.764344" data-lng-center="37.853883" data-marker="img/contacts/label.png" class="map"></div>
+          </div>
+          <div class="col-sm-5 col-lg-4 col-xl-3 pl-sm-0">
+            <div class="js-conatacts-map-descr-slider contacts__block_map-descr swiper-container">
+              <div class="swiper-wrapper mb-25">
+                <div data-lat="55.764344" data-lng="37.853883" class="swiper-slide">               
+                  <h3 class="title">Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":</h3>
+                  <div class="cbm-carts-adress">
+                    <p class="text">г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102</p><a href="tel: +74957201282" class="text">Телефон: <span class="ff-stem-b">+7 (495) 720-12-82</span></a>
+                  </div>
+                  <div class="cbm-carts-card">  
+                    <div class="cbm-carts-card-pic"><img src="img/projects/oursp1.png" alt=""></div>
+                    <p class="color-black ff-stem-b fz-18 mb-0 mb-xss-10">Сердюков Андрей</p>
+                    <p class="color-black small mb-0 mb-xss-10">Менеджер</p><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+                  </div>
+                </div>
+                <div data-lat="55.100" data-lng="37.100" class="swiper-slide">              
+                  <h3 class="title">Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":</h3>
+                  <div class="cbm-carts-adress">
+                    <p class="text">г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102</p><a href="tel: +74957201282" class="text">Телефон: <span class="ff-stem-b">+7 (495) 720-12-82</span></a>
+                  </div>
+                  <div class="cbm-carts-card">  
+                    <div class="cbm-carts-card-pic"><img src="img/projects/oursp1.png" alt=""></div>
+                    <p class="color-black ff-stem-b fz-18 mb-0 mb-xss-10">Сердюков Андрей</p>
+                    <p class="color-black small mb-0 mb-xss-10">Менеджер</p><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+                  </div>
+                </div>
+                <div data-lat="55.150" data-lng="37.150" class="swiper-slide">                              
+                  <h3 class="title">Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":</h3>
+                  <div class="cbm-carts-adress">
+                    <p class="text">г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102</p><a href="tel: +74957201282" class="text">Телефон: <span class="ff-stem-b">+7 (495) 720-12-82</span></a>
+                  </div>
+                  <div class="cbm-carts-card">  
+                    <div class="cbm-carts-card-pic"><img src="img/projects/oursp1.png" alt=""></div>
+                    <p class="color-black ff-stem-b fz-18 mb-0 mb-xss-10">Сердюков Андрей</p>
+                    <p class="color-black small mb-0 mb-xss-10">Менеджер</p><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button">
+                <div class="swiper-news-button-next">
+                  <svg class="icon icon-right-arrow-red swiper-btn-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#right-arrow-red"></use>
+                  </svg>
+                </div>
+                <div class="swiper-news-button-prev">
+                  <svg class="icon icon-left-arrow-red swiper-btn-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#left-arrow-red"></use>
+                  </svg>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="repeat-grid mb-45 mb-sm-65"></div>
+      <section class="section mb-sm-90 mb-35 contacts__block_list">
+        <div class="js-conatacts-slider swiper-container container">
+          <div class="swiper-wrapper mb-30 mb-sm-0">
+            <div class="swiper-slide">
+              <div class="contacts__block_list-item">
+                <h3 class="title mb-15">БУХГЛАТЕРИЯ</h3><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="contacts__block_list-item">
+                <h3 class="title mb-15">HR-ОТДЕЛ</h3><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="contacts__block_list-item">
+                <h3 class="title mb-15">БУХГЛАТЕРИЯ</h3><a href="tel: +79057264447" class="color-black d-block mb-0">+7 (905) 726-44-47</a><a href="mailto: serdukov@zavodshow.ru" class="color-theme d-block">serdukov@zavodshow.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button">
+            <div class="swiper-news-button-next">
+              <svg class="icon icon-right-arrow-red swiper-btn-icon">
+                <use xlink:href="svg/symbol/sprite.svg#right-arrow-red"></use>
+              </svg>
+            </div>
+            <div class="swiper-news-button-prev">
+              <svg class="icon icon-left-arrow-red swiper-btn-icon">
+                <use xlink:href="svg/symbol/sprite.svg#left-arrow-red"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="border-b"></div>
+      </div>
+    </main>
+    <div class="modals-container hidden js-show-callback">
+      <table class="modal-container_i">
+        <tr> 
+          <td>
+            <div class="box-modal posr">
+              <div class="modal-close js-btn-close-modal"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 35.121 35.121">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                      fill: none;
+                      stroke: #fff;
+                      stroke-width: 3px;
+                      }
+                    </style>
+                  </defs>  
+                  <g id="Group_248" data-name="Group 248" transform="translate(-1222.939 -68.939)">
+                    <line id="Line_72" data-name="Line 72" x1="33" y2="33" transform="translate(1224 70)" class="cls-1"></line>    
+                    <line id="Line_73" data-name="Line 73" x1="33" y1="33" transform="translate(1224 70)" class="cls-1"></line>
+                  </g>
+                </svg>
+              </div>
+              <div class="modals__callback"> 
+                <div class="modals__callback-wrapper">
+                  <h2 class="display-4 text-center mb-5">Обратный звонок</h2>
+                  <p class="fz-14 color-dark-red text-center mb-30">Мы работаем с ПН по ПТ, с 10:00 до 19:00</p>
+                  <form action="" validate class="js-form-validate services-form">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-12 mb-15">
+                          <label for="c_nic" class="small">Ваше имя</label>
+                          <input id="c_nic" type="text" name="nic" placeholder="Ваше имя" class="form-control">
+                        </div>
+                        <div class="col-12 mb-15">
+                          <label for="c_tel" class="small">Номер телефона</label>
+                          <input id="c_tel" type="tel" name="phone" placeholder="+7 (---) --- -- --" class="form-control js-mask">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <button type="submit" disabled="disabled" class="btn btn-bg js-form-send w255">ПОЗВОНИТЬ МНЕ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="overlay-success"></div>
+    <div class="js-show-modal-success modals-container hidden">
+      <table class="modal-container_i">
+        <tr> 
+          <td>
+            <div class="box-modal posr">
+              <div class="modal-close js-btn-close-modal close-success"> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 35.121 35.121">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                      fill: none;
+                      stroke: #fff;
+                      stroke-width: 3px;
+                      }
+                    </style>
+                  </defs>  
+                  <g id="Group_248" data-name="Group 248" transform="translate(-1222.939 -68.939)">
+                    <line id="Line_72" data-name="Line 72" x1="33" y2="33" transform="translate(1224 70)" class="cls-1"></line>    
+                    <line id="Line_73" data-name="Line 73" x1="33" y1="33" transform="translate(1224 70)" class="cls-1"></line>
+                  </g>
+                </svg>
+              </div>
+              <div class="modals__callback"> 
+                <div class="modals__callback-wrapper">
+                  <h2 class="display-4 text-center mb-5">Большое спасибо за запрос!</h2>
+                  <p class="fz-14 color-dark-red text-center mb-30">Наши менеджеры свяжутся с Вами </p>
+                  <p class="fz-14 color-dark-red text-center mb-30">Мы работаем с ПН по ПТ, с 10:00 до 19:00</p>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <footer class="footer bg-footer pt-xl-70 pb-xl-60 pt-60 pb-30 js-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-2 order-xl-1 mb-30 mb-xl-0"><img src="img/logo-f.png" alt="" class="f-logo ml-auto mr-auto ml-xl-0"></div>
+          <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-2 f-contacts order-xl-4 text-xl-right text-center text-sm-left mb-35 mb-sm-0"> <a href="tel: +74957201282" class="link-red mb-30"> +7 (495) 720 12 82   </a>
+            <ul class="h-societ pl-0">
+              <li><a href="#"> 
+                  <svg class="icon icon-tw h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#tw"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-inst h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#inst"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-youtube h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li><a href="#"> 
+                  <svg class="icon icon-facebook h-icon">
+                    <use xlink:href="svg/symbol/sprite.svg#facebook"></use>
+                  </svg></a></li>
+              <li class="mt-30"><a href="mailto: info@zavodshow.ru" class="link ml-xl-35 ml-0">info@zavodshow.ru</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-5 order-xl-2 text-center text-sm-left mb-sm-0 mb-5"> 
+            <ul class="f-menu pl-xl-85"></ul>
+            <li><a href="#">О КОМПАНИИ</a></li>
+            <li><a href="#">ОБОРУДОВАНИЕ</a></li>
+            <li><a href="#">УСЛУГИ</a></li>
+            <li><a href="#">ВАКАНСИИ</a></li>
+            <li><a href="#">ПРОЕКТЫ</a></li>
+            <li><a href="#">КОНТАКТЫ</a></li>
+          </div>
+          <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-3 f-adress order-xl-3 text-center">
+            <p>Москва, г. Реутов</p>
+            <p>ул. Победы д. 20</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.featureCarousel.min.js"></script>
+    <script src="js/jquery.isotope.min.js"> </script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/svgxuse.js"></script>
+    <script src="js/sticky-kit.min.js"></script>
+    <script src="js/icover.js"></script>
+    <script src="js/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.validate.min.js"> </script>
+    <script src="js/main.js"> </script>
+    <script src="js/map-google.js"> </script>
+  </body>
+</html>

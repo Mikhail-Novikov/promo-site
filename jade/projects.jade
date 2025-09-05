@@ -1,0 +1,227 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/projects/bg-projects-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Услуги
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-theme 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+        .repeat-grid.mb-45.mb-sm-65 
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('КОНЦЕРТЫ И ТУРЫ' , '279' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+
+            include templates/projects-block.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('КОНФЕРЕНЦИИ И ПРЕЗЕНТАЦИИ' , '45' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+
+            include templates/projects-block1.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('ГОРОДСКИЕ МЕРОПРИЯТИЯ' , '73' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+            include templates/projects-block2.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('КОРПОРАТИВНЫЕ МЕРОПРИЯТИЯ' , '45' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+
+            include templates/projects-block3.jade
+
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('ВЫСТАВКИ' , '19' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+            include templates/projects-block4.jade
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('СВАДЬБЫ И ДНИ РОЖДЕНИЯ' , '19' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')            
+
+
+            include templates/projects-block5.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('ОБУЧЕНИЕ' , '11' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.') 
+
+            include templates/projects-block6.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('СЪЁМКИ' , '279' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.') 
+
+            include templates/projects-block7.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('ИНСТАЛЯЦИИ' , '5' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+            include templates/projects-block8.jade
+
+        section.section.pb-70.projects__block.bg-project
+            +titleBlockProject('КЛУБНЫЕ' , '279' , 'Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня.')
+
+
+            include templates/projects-block9.jade
+
+
+
+
+
+
+
+        .line-center-title.mb-30.mb-sm-35
+            .container
+                h2.display-3.title.text-center Наши специалисты
+
+
+        section.section.mt-25.mt-sm-75.bg-white.bg-advise
+            a.icon-link-arrow.text-right.color-theme.d-inline-block.d-sm-none.mb-10.pl-30(href="#") Показать всех
+                svg.ml-20(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 37.081 13.512')
+                    defs
+                    g(data-name='Group 292', transform='translate(-413.5 -850.293)')
+                        line.cls-1(data-name='Line 36', x2='35.377', transform='translate(413.5 857.09)')
+                        path.cls-1(data-name='Path 115', d='M4709.57,249l6.049,6.049-6.049,6.049', transform='translate(-4266.452 602)')    
+            .ourspec__block.mb-65                  
+                .js-projects-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+
+
+
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+
+                        .swiper-slide
+                            .ourspec__block-item
+                                .ourspec__block-item-pic
+                                    img(src="img/projects/oursp1.png", alt="")
+                                .ourspec__block-item-descr      
+                                    h5.adv-title Иванов Андрей Григорьевич
+                                    p HR-менеджер 
+
+
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+                    a.icon-link-arrow.text-right.color-theme.d-none.d-sm-inline-block(href="#") Показать всех
+                        svg.ml-20(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 37.081 13.512')
+                            defs
+                            g(data-name='Group 292', transform='translate(-413.5 -850.293)')
+                                line.cls-1(data-name='Line 36', x2='35.377', transform='translate(413.5 857.09)')
+                                path.cls-1(data-name='Path 115', d='M4709.57,249l6.049,6.049-6.049,6.049', transform='translate(-4266.452 602)')
+
+
+        section.section.mt-120.mb-70.presentaton__block.bg-presentation
+            .bg-presentation-mobile.d-block.d-md-none
+            .row
+                .container.text-center.text-md-left
+                    .d-inline-block
+                        h3.text-left.presentaton__block-title.mb-15 Презентация
+                        p.text-left.text.mb-15.mb-xss-25 Посмотрите нашу презентацию
+                        a.btn.btn-white.d-block(href="#") СКАЧАТЬ
+
+        .container
+            .border-b
+
+
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade

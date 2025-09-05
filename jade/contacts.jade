@@ -1,0 +1,166 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    script( src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAMVuRK48e9494g0NDZUYy5VkDqQHoTNdM') 
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+
+        section.section.contacts__block_map.pb-40.pb-lg-60
+            .line-right
+                h1.title КОНТАКТЫ 
+                span.line-right-item
+            .contacts__block_map-item.posr.row.js-right-offset
+                .col-sm-7.col-lg-8.col-xl-9.pr-sm-0
+                    #map.map( data-lat-center="55.764344" , data-lng-center="37.853883" , data-marker="img/contacts/label.png")
+                .col-sm-5.col-lg-4.col-xl-3.pl-sm-0
+                    .js-conatacts-map-descr-slider.contacts__block_map-descr.swiper-container
+
+                        .swiper-wrapper.mb-25
+                            .swiper-slide( data-lat="55.764344" , data-lng="37.853883")                
+                                h3.title Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":
+                                .cbm-carts-adress
+                                    p.text г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102
+
+                                    a.text(href="tel: +74957201282") Телефон: 
+                                        span.ff-stem-b +7 (495) 720-12-82
+
+                                .cbm-carts-card   
+                                    .cbm-carts-card-pic
+                                        img(src="img/projects/oursp1.png", alt="")   
+                                    p.color-black.ff-stem-b.fz-18.mb-0.mb-xss-10 Сердюков Андрей
+                                    p.color-black.small.mb-0.mb-xss-10 Менеджер
+                                    a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                                    a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+                            .swiper-slide( data-lat="55.100" , data-lng="37.100")               
+                                h3.title Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":
+                                .cbm-carts-adress
+                                    p.text г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102
+
+                                    a.text(href="tel: +74957201282") Телефон: 
+                                        span.ff-stem-b +7 (495) 720-12-82
+
+                                .cbm-carts-card   
+                                    .cbm-carts-card-pic
+                                        img(src="img/projects/oursp1.png", alt="")   
+                                    p.color-black.ff-stem-b.fz-18.mb-0.mb-xss-10 Сердюков Андрей
+                                    p.color-black.small.mb-0.mb-xss-10 Менеджер
+                                    a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                                    a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+
+                            .swiper-slide( data-lat="55.150" , data-lng="37.150")                               
+                                h3.title Офис ООО "ЗАВОД ШОУ" и Склад "ЗАВОД ШОУ":
+                                .cbm-carts-adress
+                                    p.text г. Реутов, ул. Победы д. 20 (площадь академика Челомея, д. 1), оф. 102
+
+                                    a.text(href="tel: +74957201282") Телефон: 
+                                        span.ff-stem-b +7 (495) 720-12-82
+
+                                .cbm-carts-card   
+                                    .cbm-carts-card-pic
+                                        img(src="img/projects/oursp1.png", alt="")   
+                                    p.color-black.ff-stem-b.fz-18.mb-0.mb-xss-10 Сердюков Андрей
+                                    p.color-black.small.mb-0.mb-xss-10 Менеджер
+                                    a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                                    a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+
+                        .swiper-button
+                            .swiper-news-button-next
+                                +icon('right-arrow-red','swiper-btn-icon')
+                            .swiper-news-button-prev
+                                +icon('left-arrow-red','swiper-btn-icon')
+
+                        .swiper-pagination
+
+
+        .repeat-grid.mb-45.mb-sm-65
+
+        section.section.mb-sm-90.mb-35.contacts__block_list
+            .js-conatacts-slider.swiper-container.container
+                .swiper-wrapper.mb-30.mb-sm-0
+                    .swiper-slide
+                       .contacts__block_list-item
+                            h3.title.mb-15 БУХГЛАТЕРИЯ
+                            a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                            a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+
+                    .swiper-slide
+                       .contacts__block_list-item
+                            h3.title.mb-15 HR-ОТДЕЛ
+                            a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                            a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+
+                    .swiper-slide
+                       .contacts__block_list-item
+                            h3.title.mb-15 БУХГЛАТЕРИЯ
+                            a.color-black.d-block.mb-0(href="tel: +79057264447") +7 (905) 726-44-47
+                            a.color-theme.d-block(href="mailto: serdukov@zavodshow.ru") serdukov@zavodshow.ru
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon') 
+
+                .swiper-pagination
+
+        .container
+            .border-b
+
+
+    include templates/modals-callback.jade
+
+    include templates/footer.jade
+
+
+    script(src='js/jquery-1.7.min.js')
+    script(src='js/jquery.featureCarousel.min.js')
+    script(src='js/jquery.isotope.min.js') 
+    script(src='js/swiper.min.js')
+    script(src='js/svgxuse.js')
+
+    script(src='js/sticky-kit.min.js')
+    script(src='js/icover.js')
+    script(src='js/jquery.arcticmodal-0.3.min.js')
+    script(src='js/wow.min.js')
+    script(src='js/jquery.maskedinput.js')
+    script(src='js/jquery.validate.min.js')  
+                  
+    script(src='js/main.js') 
+    script(src='js/map-google.js') 

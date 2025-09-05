@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'Stem-Bold';
+	src: url('../fonts/Steam/Stem-Bold.eot');
+	src: local('Stem-Bold'), local('Stem-Bold'),
+		url('../fonts/Steam/Stem-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Steam/Stem-Bold.woff') format('woff'),
+		url('../fonts/Steam/Stem-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stem-Regular';
+	src: url('../fonts/Steam/Stem-Regular.eot');
+	src: local('Stem-Regular'), local('Stem-Regular'),
+		url('../fonts/Steam/Stem-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Steam/Stem-Regular.woff') format('woff'),
+		url('../fonts/Steam/Stem-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stem-Light';
+	src: url('../fonts/Steam/Stem-Light.eot');
+	src: local('Stem-Light'), local('Stem-Light'),
+		url('../fonts/Steam/Stem-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Steam/Stem-Light.woff') format('woff'),
+		url('../fonts/Steam/Stem-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.ffbase-regular{
+	font-family: 'Stem-Regular';
+}
+.ffbase-bold{
+	font-family: 'Stem-Bold';
+}
+.ffbase-light{
+	font-family: 'Stem-Light';
+}

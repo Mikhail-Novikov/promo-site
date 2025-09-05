@@ -1,0 +1,124 @@
+@import "bourbon"
+
+$default-font: "Stem-Regular", sans-serif
+$color-base: #161b6e;
+$color-dark-red: #AE2020;
+$color-dark-blue: #005cff;
+$color-dark-gray: #10121A;
+
+$delay-btn: 0.3s
+$link : #2ec1ff
+
+.color-dark-red
+	color: $color-dark-red
+.color-gray
+	opacity: 0.7
+	color: #10121a
+	font-size: 16px
+	letter-spacing: 0.32px
+	line-height: 30px
+.color-black
+	line-height: 22px
+	color: #10121a
+.bgc-blue
+	background-color: $color-dark-blue
+.bgc-red
+	background-color: $color-dark-red
+.bgc-gray
+	background-color: #3c3c3c
+.bgc-gray-lite
+	background-color: #f0f0f0;
+.fz-24
+	font-size: 24px
+.fz-12
+	font-size: 12px	
+.fz-16
+	font-size: 16px	
+.fz-18
+	font-size: 18px	
+.v-middle
+	+vertical
+
+
+=border-box-light()
+    background-repeat: no-repeat
+    background-color: rgba(255, 255, 255, 0.29)
+    z-index: 1000
+    box-shadow: 0px 0px 13px rgba(255, 255, 255, 0.73) inset
+    background-size: cover
+
+=text-small-black()
+	color: #3f505a
+	font-family: $default-font
+	font-size: 12px;
+	font-weight: 400
+	line-height: 15px   
+
+
+.p-r-0
+	padding-right: 0
+.small-text	
+	+text-small-black()
+.posr
+	position: relative
+.poss
+	position: static
+.w255
+ 	width: 255px
+ul
+	padding: 0
+ul li
+	list-style: none
+a
+	text-decoration: none
+	transition: $delay-btn
+	color: #fff 
+	&:hover, &:focus
+		text-decoration: none
+		transition: $delay-btn
+		color: #e22a2a !important
+img
+	max-width: 100%
+	display: block
+	height: auto
+input
+	outline: none
+	font-size: 18px
+
+.text-underlie	
+	background: linear-gradient(to right, $link, $link 100%);
+	background-position: 0 100%;
+	background-size: 10px 1px;
+	background-repeat: repeat-x;
+
+
+.block
+	text-align: justify
+	&:after
+		content: ""
+		display: inline-block
+		width: 100%
+
+.dt
+ 	display: table	
+ 	width: 100%
+ 	height: 100%
+.dtc
+	display: table-cell
+	vertical-align: middle
+	height: 100%
+.absolut-center
+	width: 100%
+	transform: translateY(-50%)
+	position: absolute
+	top: 50%
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+.content
+	flex: 1 0 auto
+.mb45
+	margin-bottom: 45px
+footer
+	flex: 0 0 auto

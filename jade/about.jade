@@ -1,0 +1,268 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css')
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner.mb-45.mb-sm-65
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/about/bg-about-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title Оборудование
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+
+
+
+
+        section.section.mb-30.mb-sm-65.event__project
+            h2.title.text-sm-center.pl-15.pr15 КАЖДЫЙ ПРОЕКТ УНИКАЛЕН
+            .container
+                .row
+                    .col-3.text-left.d-none.d-sm-block
+                        ul.sticky
+                            li.date 2011
+                            li.date-text ГОД ОСНОВАНИЯ
+
+                    .col-sm-6
+
+                        p.event__project-content
+                            |Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. Успешно зарекомендовав себя и в туровой, и в корпоративной работе, компания не делит мероприятия на большие и маленькие. «Каждый проект для нас важен и уникален, и к каждому у нас индивидуальный подход»
+
+                    .col-3.text-right.d-none.d-sm-block
+                    
+
+        section.section.mb-30.mb-sm-65.event__project
+            h2.title.text-sm-center.pl-15.pr15 EVENT
+            .container
+                .row
+                    .col-3.text-left.d-none.d-sm-block
+                        ul.sticky.mt-125
+                            li.date 2016
+                            li.date-text ГОД ОСНОВАНИЯ
+
+                    .col-sm-6
+
+                        p.event__project-content
+                            |В плане event у нас также уникальный подход. Каждый раз это проект с чистого листа. Имея свою базу площадок мы не проделываем одну работу дважды. Наши специалисты всегда приезжают на площадку до начала работ. После осмотра прорисовывают 3D-модель с предложениями по световому оформлению мероприятия. Перед сложными и ответственными событиями мы проводим репетицию на собственной базе и пытаемся заранее обнаружить и проработать все подводные камни. Задача наших специалистов не работать по шаблону, а всегда предлагать свежие решения. Зачастую, конечно, основная работа ложится на дизайнера и наша задача сделать подсветку декорациям или поставить концертный или художественно-постановочный свет. Конечно, эта работа требует очень большой аккуратности и чуткости, надо понимать заказчика. Основная задача на таких проектах - сделать красиво, и мы уже начали пробовать объяснять, как лучше что-то сделать. Должен сказать, что мы не бросаем своих клиентов даже в горячие декабрьские дни. Чем заказчику удобно работать с нами в event направлениях? Мы даже готовы уходить в субаренду и предлагать клиенту ту же стоимость. Мы доступны для постоянных клиентов 24 часа, у нас есть оборудование, у нас ответственность, каждый проект мы прорисовываем, делаем 3D проект, что позволяет сделать визуализацию проекта, плюс конечно надежность. И к тому же мы позволяем себе считать сметы для топовых заказчиков чуть ли не в полночь, а такие ситуации тоже бывают и не редко. Конечно это только для уже знакомых заказчиков.
+
+
+                    .col-3.text-right.d-none.d-sm-block
+                        ul.sticky
+                            li.date 2012
+                            li.date-text УСПЕШНЫХ ЗАКАЗОВ В ГОД
+      
+        section.section.mb-30.mb-sm-65.event__project
+            h2.title.text-sm-center.pl-15.pr15 КАЖДЫЙ ПРОЕКТ УНИКАЛЕН
+            .container
+                .row
+                    .col-3.text-left.d-none.d-sm-block
+                        ul.sticky
+                            li.date 
+                            li.date-text
+
+                    .col-sm-6
+
+                        p.event__project-content
+                            |Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. Успешно зарекомендовав себя и в туровой, и в корпоративной работе, компания не делит мероприятия на большие и маленькие. «Каждый проект для нас важен и уникален, и к каждому у нас индивидуальный подход»
+
+                    .col-3.text-right.d-none.d-sm-block
+                        ul.sticky
+                            li.date СЕГОДНЯ
+                            li.date-text СОТРУДНИКОВ       
+
+        section.section.mb-30.mb-sm-65.event__project
+            h2.title.text-sm-center.pl-15.pr15 ЗАДАЧИ И РЕШЕНИЯ
+            .container
+                .row
+                    .col-3.text-left.d-none.d-sm-block
+                        ul.sticky
+                            li.date 
+                            li.date-text
+
+                    .col-sm-6
+
+                        p.event__project-content
+                            |ZavodShow предоставляет в аренду звуковое, световое, а также видеооборудование для проведения концертов и шоу-программ. Комплексный подход позволяет вам ни о чем не беспокоиться. Мы выполняем все работы по монтажу и демонтажу нашего оборудования. Мы же проводим его техническую поддержку на протяжении всего мероприятия. Компания завод шоу обеспечивает события любого масштаба. Даже самые массовые мероприятия проходят, благодаря нам, на высочайшем уровне
+
+                    .col-3.text-right.d-none.d-sm-block
+                        ul.sticky
+                            li.date 
+                            li.date-text 
+
+
+
+        section.section.mb-30.mb-sm-65.event__project
+            h2.title.text-sm-center.pl-15.pr15 КАЖДЫЙ ПРОЕКТ УНИКАЛЕН
+            .container
+                .row
+                    .col-3.text-lrft.d-none.d-sm-block
+                        ul
+                            li.date 2018
+                            li.date-text ГОД ОСНОВАНИЯ
+
+                    .col-sm-6
+
+                        p.event__project-content
+                            |Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. Успешно зарекомендовав себя и в туровой, и в корпоративной работе, компания не делит мероприятия на большие и маленькие. «Каждый проект для нас важен и уникален, и к каждому у нас индивидуальный подход»
+
+                    .col-3.text-right.d-none.d-sm-block
+
+        section.section.mb-65.mb-sm-135.mt-70.mt-sm-0.documents__block
+            h2.title.text-sm-center.pl-15.pr15 СЕРТИФИКАТЫ И ДИПЛОМЫ
+            
+            .container.mt-45.mb56.posr
+
+
+                include templates/doc-carousel.jade  
+                
+
+                include templates/doc-slider.jade
+                    
+
+
+        .line-center-title.mb-45
+            .container
+                h2.display-3.title.text-xss-center.pl-15.pr15 Отзывы и рекомендации
+
+        section.section.mt-75.bg-white.bg-advise
+
+            .advise__block.mb-65.mb-65                   
+                .js-advise-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+                                    
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+        .line-center-title.mb-45.mt-95.d-none.d-sm-block
+            .container
+                h2.display-3.title.text-xss-center.pl-15.pr15 Партнёры
+
+        section.section.mt-75.mb-60.bg-white.d-none.d-sm-block
+
+            .partner__block
+                .js-partner-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            img(src="img/about/partn1.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn2.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn3.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn4.png", alt="")
+                        .swiper-slide
+                            img(src="img/about/partn5.png", alt="")
+
+        .container
+            .border-b
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+
+
+
+
+
+
+
+
+

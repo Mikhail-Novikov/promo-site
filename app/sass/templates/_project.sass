@@ -1,0 +1,340 @@
+.projects__last
+.bg-project-last
+	background: url(../img/advise/bg-advise.png) no-repeat 102% 50%
+	background-attachment: fixed
+
+.projects__last-item
+	display: block
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1)
+	background-color: #ffffff
+	position: relative
+	margin-bottom: 30px
+	margin-top: 15px
+	cursor: pointer
+	img
+		width: 100%
+	
+	.projects__last-item-date
+		position: absolute
+		top: 0
+		right: 0
+		padding: 13px
+		background-color: #10121a
+		color: #fff
+		font-size: 12px
+		font-family: "Stem-Light"
+		letter-spacing: 1.2px;
+		z-index: 3
+		transition: 0.2s	
+	&:hover .projects__last-item-date
+		background-color: #fff
+		color: #000	
+	&:hover h3
+		@extend  .color-theme
+
+
+.projects__last-item-descr
+	padding: 23px 25px
+	text-align: left
+	width: 100%
+	transition: 0.3s
+	h3, p
+		max-width: 200px		
+	h3
+		font-size: 16px
+		letter-spacing: 1.6px
+		max-height: 2.5em
+		overflow: hidden
+		margin-bottom: 14px
+		line-height: 1.4
+		text-transform: uppercase
+	p
+		font-family: "Stem-Light"
+		color: #000
+		opacity: 0.5
+		letter-spacing: 0.56px
+		margin-bottom: 21px		
+		max-height: 2.8em
+		overflow: hidden		
+
+
+//--- calculator  ----
+
+.projects__calc
+	.bg-white
+		height: 100%
+	.form__calc_sel
+		padding: 35px 35px 10px 35px
+		position: relative
+		.custom-control
+			padding-left: 12px
+			label		
+				margin-left: 12px
+				font-family: 'Stem-Bold'					
+		.custom-checkbox 
+			.custom-control-input:checked ~ .custom-control-label
+				&::after
+					height: 8px;
+					width: 8px;
+					background-color: $color-dark-red;
+					margin: 4px
+
+		&:after
+			content: ''
+			position: absolute
+			width: 46px
+			height: 46px
+			background-color: #fff
+			transform: rotate(-45deg)
+			top: 50%
+			right: -23px
+			margin-top: -23px
+
+
+	.fcs-ogl
+		margin-bottom: 12px
+		opacity: 0.5
+
+
+	.c-slider
+		background-color: rgba(16, 18, 26, 0.2)
+		border: none
+		position: relative
+		text-align: left
+		height: 3px
+
+	.c-slider-handle
+		border: 1px solid #10121a
+		border-radius: 0
+		background: #10121a
+		font-weight: normal;
+		color: #fff
+		top: -10px
+		text-align: center
+		margin-left: -.6em;
+		position: absolute;
+		z-index: 2;
+		min-width: 23px
+		min-height: 23px
+		cursor: default;
+		-ms-touch-action: none;
+		touch-action: none;
+		outline: none
+	.ui-slider .ui-slider-range
+		background-color: #10121a
+
+
+
+.projects__calc_rezult
+	padding: 30px 30px 15px 30px
+	.title
+		margin-bottom: 28px
+		font-size: 16px
+		line-height: 1.6
+		letter-spacing: 1.6px
+	ul 
+		margin-left: 20px
+		li
+			margin-bottom: 12px
+			list-style: initial
+			list-style-type: disc		
+	.pcr-t 
+		margin-bottom: 5px
+		+cfx
+		li
+			float: left
+			width: 50%
+
+	.pcr-b 
+		margin-bottom: 19px
+	
+	.calc-rezult 
+		color: $color-dark-red
+		font-family: 'Stem-Bold'
+		font-size: 27px
+		letter-spacing: 2px
+		margin-bottom: 26px
+
+// страница PROJECTS
+.projects__block
+	.title
+		font-size: 18px
+		letter-spacing: 3.6px;
+		text-transform: uppercase
+	.count
+		@extend .color-theme
+		padding-left: 6px
+	.projects__last-item-descr p
+		margin-bottom: 4px
+	.projects__block-text
+		color: #10121a
+		font-size: 16px
+		letter-spacing: 0.48px
+		line-height: 24px
+	.projects__last-item-date
+		background-color: #10121a
+	.projects__last-item
+		&:hover .projects__last-item-date
+			background-color: #fff !important
+		&:hover .pli-overlay 
+			transform: scale(1)
+	.pli-t 
+		img
+			width: 100%
+	.pli-overlay   
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		z-index: 2
+		background-color: rgba(174, 32, 32, 0.82)
+		color: #fff
+		font-family: 'Stem-Bold'
+		font-size: 16px
+		letter-spacing: 3.2px
+		text-align: center
+		transform: scale(0)
+		transition: transform 0.3s
+.icon-link-arrow 
+	font-size: 12px
+	svg
+		position: relative;
+		width: 35px
+		display: inline-block
+		vertical-align: middle
+	.cls-1
+		fill: none
+		@extend .svg-theme
+		stroke-width: 2px
+		transition: 0.3s
+	&:hover
+		@extend .color-theme 
+	&:hover svg 
+		@extend .animated			
+		@extend .slideOutRight
+
+		.cls-1
+			stroke: #2ec1ff
+
+
+//-------presentaton--------------
+.bg-presentation
+	position: relative
+	@extend .bgc-theme	
+	&:before
+		content: '';
+		position: absolute;
+		left: 65%;
+		margin-left: -350px
+		top: -70px;
+		display: block;
+		height: 550px;
+		width: 600px;
+		background: url(../img/book-dr.png) no-repeat center;
+.bg-presentation-mobile
+	&:before
+		content: '';
+		position: absolute;
+		left: 50%;
+		margin-left: -180px;
+		top: -90px;
+		display: block;
+		height: 350px;
+		width: 390px;
+		background: url(../img/book-m.png) no-repeat center;
+.presentaton__block
+	padding: 30px 15px
+	min-height: 260px
+
+	.text
+		opacity: 0.7
+		color: #ffffff
+		font-size: 14px
+		letter-spacing: 0.32px
+		line-height: 20px
+.presentaton__block-title
+	color: #ffffff
+	font-size: 48px
+	line-height: 58px
+	letter-spacing: 3.6px
+
+
+//----------- projects__tour  -----------	
+.bg-project-tour
+	background: url(../img/projects/bg-project-tour.png) no-repeat center
+	height: 110px
+
+
+//----------- projects__page  -----------	
+.pp-list li, .pp-text
+		margin-bottom: 24px
+		color: #10121a
+		font-size: 15px
+		letter-spacing: 0.48px
+		line-height: 24px
+.pp-text
+	margin-bottom: 46px
+
+.pp-list li
+	&:before
+		content: ""
+		font-size: 20px
+		background-color: $color-dark-red
+		width: 16px
+		height: 2px
+		display: inline-block
+		vertical-align: middle
+		margin-right: 16px
+
+.pp-r-wrap
+	padding: 23px 15px 40px 40px
+
+.pp-r-item
+	padding-left: 20px
+	color: #10121a
+	font-size: 12px
+	letter-spacing: 0.36px
+	line-height: 20px
+	width: 200px	
+.pp-r-title
+	color: #10121a
+	font-size: 14px
+	line-height: 20px
+	font-family: "Stem-Bold"
+	margin: 18px 0
+	width: 200px
+
+
+
+//---------------------------------------
+@media only screen and (max-width : 1000px)
+	.projects__calc
+		.form__calc_sel
+			&:after	
+				top: 100%
+				right: 50%
+				margin-top: -23px
+				margin-right: -23px
+
+@media only screen and (max-width : 850px)
+	.projects__calc
+		.custom-control-inline
+			display: flex
+			margin-bottom: 15px
+
+
+
+	.projects__calc_rezult ul li
+		color: $color-dark-red
+		span
+			color: #000
+@media only screen and (min-width : 1200px)
+
+	.projects__tour__block
+		.swiper-button, .swiper-pagination
+			display: none
+
+
+

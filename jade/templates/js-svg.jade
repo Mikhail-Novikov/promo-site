@@ -1,0 +1,17 @@
+
+script.
+  // Load and insert svg-symbols.svg
+  (function()
+  {
+  'use strict';
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function()
+  {
+  if (xhr.status >= 200 && xhr.status < 400)
+  {
+  document.body.insertAdjacentHTML('afterbegin', xhr.responseText);
+  }
+  };
+  xhr.open('GET', 'svg/symbol/sprite.svg', true);
+  xhr.send();
+  })();

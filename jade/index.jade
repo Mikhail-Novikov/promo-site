@@ -1,0 +1,298 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+    link(rel='stylesheet', href='css/jquery-ui.min.css')
+
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+    main.content
+        include templates/promo-home2.jade
+
+
+        section.section.pt-55.pb-55.pb-sm-65.bg-project-last
+            .line-title.mb-sm-40.mb-35
+                .container
+                    h2.title ПОСЛЕДНИЕ ПРОЕКТЫ 
+
+            .projects__last
+                .js-four-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .projects__last-item
+                                p.projects__last-item-date
+                                    |13.09.17
+                                img(src="img/projects/pl1.png", alt="")
+                                .projects__last-item-descr    
+                                    h3 ПРОЕКТ "ТАНЦЫ" НА ТНТ
+                                    p Аренда света и прокат светового оборудования
+                                    button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+                        .swiper-slide
+                            .projects__last-item
+                                p.projects__last-item-date
+                                    |13.09.17
+                                img(src="img/projects/pl2.png", alt="")
+                                .projects__last-item-descr    
+                                    h3 ТУР НОЧНЫХ СНАЙПЕРОВ
+                                    p Аренда света и прокат светового оборудования
+                                    button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+
+                        .swiper-slide
+                            .projects__last-item
+                                p.projects__last-item-date
+                                    |13.09.17
+                                img(src="img/projects/pl3.png", alt="")
+                                .projects__last-item-descr    
+                                    h3 ПРОЕКТ "ТАНЦЫ" НА ТНТ
+                                    p Аренда света и прокат светового оборудования
+                                    button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+                        .swiper-slide
+                            .projects__last-item
+                                p.projects__last-item-date
+                                    |13.09.17                            
+                                img(src="img/projects/pl4.png", alt="")
+                                .projects__last-item-descr    
+                                    h3 ТУР НОЧНЫХ СНАЙПЕРОВ
+                                    p Аренда света и прокат светового оборудования
+                                    button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+
+
+        section.section.pt-55.pb-95.bgc-gray-lite.js-right-offset
+            .line-title.mb-45
+                .container.js-container-offset-right
+                    .row
+                        h2.title.pl-15 РАССЧИТАТЬ ПРОЕКТ 
+
+            .projects__calc.container.js-container-offset-right
+                .row
+                    form(action="form-calculator").row
+                        .col-md-8.col-lg-8.ml-15.mr-15.pr-sm-35.ml-sm-0.mr-sm-0.mb-70.mb-md-0
+                            .form__calc_sel.bg-white
+                                .mb-35
+                                    p.fcs-ogl Что вам нужно?
+                                    .custom-control.custom-checkbox.custom-control-inline
+                                        input#audio.custom-control-input(type='checkbox', name='audio' value='1000')
+                                        label.custom-control-label(for='audio') Аудиотехника
+                                    .custom-control.custom-checkbox.custom-control-inline
+                                        input#light.custom-control-input(type='checkbox', name='light' value='2000')
+                                        label.custom-control-label(for='light') Светотехника
+                                    .custom-control.custom-checkbox.custom-control-inline
+                                        input#rent-light.custom-control-input(type='checkbox', name='rent-light' value='3000')
+                                        label.custom-control-label(for='rent-light') Аренда света
+                                    .custom-control.custom-checkbox.custom-control-inline
+                                        input#video.custom-control-input(type='checkbox', name='video' value='4000')
+                                        label.custom-control-label(for='video') Видеотехника
+
+                                .mb-30
+                                    label.fcs-ogl(for='') Количество рабочих часов
+                                    .js-slider-hour.c-slider.custom-range
+                                      .js-custom-handle-hour.c-slider-handle.ui-slider-handle    
+                                .mb-30
+                                    label.fcs-ogl(for='') Количество дней
+                                    //- input#customRange1.custom-range(type='range' min="1" max="60")
+                                    .js-slider-day.c-slider.custom-range
+                                      .js-custom-handle-day.c-slider-handle.ui-slider-handle
+                                .mb-40
+                                    p.fcs-ogl Дополнительные услуги
+                                    .custom-control.custom-checkbox
+                                        input#dop-services.custom-control-input(type='checkbox', name='dop-services' value='100000')
+                                        label.custom-control-label(for='dop-services') Специалисты по оборудованию
+
+
+                        .col-md-4.col-lg-4.ml-15.mr-15.ml-sm-0.mr-md-0
+                            .projects__calc_rezult.bg-white
+                                h4.title ПРИБЛИЗИТЕЛЬНАЯ СТОИМОСТЬ АРЕНДЫ
+                                ul.pcr-t
+                                    li 
+                                        span Аудиотехника
+                                    li 
+                                        span Светотехника
+                                    li 
+                                        span Аренда света
+                                    li 
+                                        span Видеотехника
+                                ul.pcr-b
+                                    li 
+                                        span 9 рабочих дней, по 12 часов
+                                    li 
+                                        span Специалисты по оборудованию
+
+                                p.calc-rezult 
+                                    span.pr-10 ≈
+                                    span.calc-rezult-item 135 500 
+                                    span.pl-10 руб.
+
+                                button.btn.btn-op.btn-full.js-callback-btn ОСТАВИТЬ ЗАЯВКУ
+
+        section.section.mt-95.bg-white.bg-advise
+            .container.mb-80.mb-sm-95
+                .about__block.row
+                    .col-sm-6
+                        .dt
+                            .dtc
+                                img(src="img/advise/logo-adv.png", alt="")
+
+                    .col-sm-6
+                        h1.ab-title О КОМПАНИИ
+                        strong.ab-descr Товарищи! реализация намеченных плановых заданий представляет собой интересный эксперимент проверки форм развития.
+
+                        p.ab-text Задача организации, в особенности же постоянный количественный рост и сфера нашей активности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же начало повседневной работы по формированию позиции требуют от нас анализа направлений прогрессивного развития.  
+
+                        a(href="#").btn.btn-bg Подробнее
+
+            .line-title.mb-55
+                .container
+                    h2.title НАС РЕКОМЕНДУЮТ
+            .advise__block.mb-55.mb-sm-65                  
+                .js-advise-slider.swiper-container.container
+                    .swiper-wrapper
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+                                    
+                        .swiper-slide
+                            .advise__block-item
+                                .advise__block-item-pic
+                                    img(src="img/advise/adv1.png", alt="")
+                                .advise__block-item-descr      
+                                    h5.adv-title Пенкин Сергей
+                                    p Компания Zavodshow не первый год успешно занимает нишу лидеров в сфере организации и технического обеспечения мероприятий самого разного уровня. 
+
+                                    a.link-red(href="#") Смотреть видеоотзыв
+
+                    .swiper-button
+                        .swiper-news-button-next
+                            +icon('right-arrow-red','swiper-btn-icon')
+                        .swiper-news-button-prev
+                            +icon('left-arrow-red','swiper-btn-icon')
+
+                    .swiper-pagination
+
+        section.section.pt-55.pb-55.bgc-gray-lite.our__instagramm__block.js-left-offset
+            .line-title.mb-55
+                .container.js-container-offset-left
+                    h2.title НАШ INSTAGRAM
+                        a.d-none.d-sm-block(href="#").remark @ZAVODSHOW
+            .container.js-container-offset-left
+                .our__instagramm
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi1.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi2.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi3.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi1.png", alt="")
+
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi3.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi2.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi3.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi1.png", alt="")
+
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi2.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi1.png", alt="")
+
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi3.png", alt="")
+                    a(href="#").our__instagramm-item
+                        img(src="img/our-instagramm/oi1.png", alt="")
+
+                a(href="#").d-block.d-sm-none.text-center.ff-stem-b.float-none.mt-25.remark @ZAVODSHOW
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+
+
+
+
+
+
+
+
+

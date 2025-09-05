@@ -1,0 +1,192 @@
+include mixin/_mixins
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title ZavodShow - всё для шоу
+    meta(name='description', content='')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(property='og:image', content='path/to/image.jpg')
+    link(rel='shortcut icon', href='img/favicon/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='img/favicon/favicon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-touch-icon-114x114.png')
+    link(href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet")
+
+    // Chrome, Firefox OS and Opera
+    meta(name='theme-color', content='#000')
+    // Windows Phone
+    meta(name='msapplication-navbutton-color', content='#000')
+    // iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+    // IE 8
+    //if lt IE 8
+      p.browserupgrade
+        | You are using an 
+        strong outdated 
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+
+
+    link(rel='stylesheet', href='css/animate.css') 
+    link(rel='stylesheet', href='sprite/sprite.css') 
+    link(rel='stylesheet', href='css/swiper.min.css')              
+    link(rel='stylesheet', href='css/main.css') 
+
+    //- link(rel='stylesheet', href='css/reset.css') 
+   
+  body.color-theme-red
+    include templates/header.jade
+
+    main.content
+        .promo__inner
+            .promo__inner-wrap
+                img.promo__inner-pic(src="img/solutions/bg-solutions-promo.jpg", alt="")
+            .promo__inner-c-block
+                h1.promo__inner-title 
+                strong.promo__inner-descr МЫ СДЕЛАЛИ 
+                    span.color-dark-red 1492 
+                    span ШОУ
+                nav.text-center(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') Главная
+                        li.breadcrumb-item.active(aria-current='page') Услуги
+
+        .repeat-grid.mb-45.mb-sm-65
+                
+        section.section.solution__block.line-title-section.pb-40.posr
+            .container            
+                .row
+                    .col-sm-7.mb-45
+                        h3.title.mb-50 ГОТОВОЕ РЕШЕНИЕ
+                        p.sb-text Наши специалисты подробно расскажут обо всем, что может понадобиться для проведения вашего шоу. Вам достаточно просто описать замысел представления. А если замысла у вас нет – мы сами придумаем и предложим вам несколько вариантов режиссуры.
+                    .col-sm-5
+                        p.title.ff-stem-b.fz-18.mb-55 СТОИМОСТЬ
+
+                        p.price-old 
+                            span.delete 85 500 руб.
+
+                        p.price_new 75 500 руб.
+
+
+
+
+        section.section.line-title-section.pb-70
+            .container
+                h3.title.mb-25.mb-sm-55 ПОПУЛЯРНОЕ ОБОРУДОВАНИЕ
+                
+            .js-equipments-slider.swiper-container.container
+                .swiper-wrapper.mb-40.mb-sm-0
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld1.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld2.png", alt="")
+                                p  ROXTON PL270
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld3.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld4.png", alt="")
+                                p  ROXTON PL270
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld1.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld2.png", alt="")
+                                p  ROXTON PL270
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld3.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld4.png", alt="")
+                                p  ROXTON PL270
+
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld1.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld2.png", alt="")
+                                p  ROXTON PL270
+                    .swiper-slide
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld3.png", alt="")
+                                p AVOLITES TITAN MOBILE
+
+                        a(href="#").equipments__light__block-item.dt
+                            .dtc.text-center
+                                img(src="img/equipments/eqld4.png", alt="")
+                                p  ROXTON PL270
+                .swiper-button
+                    .swiper-news-button-next
+                        +icon('right-arrow-red','swiper-btn-icon')
+                    .swiper-news-button-prev
+                        +icon('left-arrow-red','swiper-btn-icon')
+
+                .swiper-pagination
+
+
+        section.section.pb-30.pb-sm-55.pt-60.bgc-gray-lite
+            .line-center-title
+            .container.mb-35.mt-0.mt-xss-55
+                h2.display-3.text-center.mb-35 Начнём сейчас
+
+                form.js-form-validate.services-form(action="")
+                    .form-group
+                        .row
+                            .col-12.mb-15
+                                label.small(for='nic') Ваше имя
+                                input#nic.form-control(type='text' name="nic" placeholder="Ваше имя")
+        
+
+                            .col-12.mb-15
+                                label.small(for='tel') Номер телефона
+                                input#tel.form-control.js-mask(type='tel' name="phone" placeholder="+7 (---) --- -- --")
+  
+
+                            .col-12.mb-15
+                                label.small(for='nic') Ваш e-mail
+                                input#mail.form-control(type='email' name="email" placeholder="Ваш e-mail")
+     
+                            .col-12.mb-5
+                                label.small(for='todo') Задача
+                                textarea#todo.todo-textarea.form-control(name="textarea" placeholder="Опишите свою задачу")
+                    .text-center                
+                        button.btn.btn-bg.js-form-send.w255(type='submit' disabled="disabled") НАЧАТЬ РАБОТУ
+
+        .container.d-block.d-sm-none
+            .border-b
+
+
+
+    include templates/modals-callback.jade
+    include templates/footer.jade
+
+
+    include scripts.jade
+
+
